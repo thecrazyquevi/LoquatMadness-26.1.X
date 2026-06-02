@@ -53,5 +53,4 @@ public class LoquatMadness {
 
     }
 
-    // Just for the first commit
 }
