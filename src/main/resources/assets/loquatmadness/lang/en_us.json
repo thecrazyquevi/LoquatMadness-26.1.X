@@ -1,13 +1,3 @@
 {
-  "itemGroup.loquatmadness": "Example Mod Tab",
-  "block.loquatmadness.example_block": "Example Block",
-  "item.loquatmadness.example_item": "Example Item",
-
-  "loquatmadness.configuration.title": "Loquat Madness Configs",
-  "loquatmadness.configuration.section.loquatmadness.common.toml": "Loquat Madness Configs",
-  "loquatmadness.configuration.section.loquatmadness.common.toml.title": "Loquat Madness Configs",
-  "loquatmadness.configuration.items": "Item List",
-  "loquatmadness.configuration.logDirtBlock": "Log Dirt Block",
-  "loquatmadness.configuration.magicNumberIntroduction": "Magic Number Text",
-  "loquatmadness.configuration.magicNumber": "Magic Number"
+  "item.loquatmadness.loquat": "Loquat"
 }
