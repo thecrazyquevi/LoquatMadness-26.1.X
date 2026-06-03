@@ -1,5 +1,6 @@
 package dev.drqv.loquatmadness;
 
+import dev.drqv.loquatmadness.creativemodetab.ModCreativeModeTabs;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import org.slf4j.Logger;
 
@@ -32,6 +33,8 @@ public class LoquatMadness {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         LoquatMadness_Items.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -47,8 +50,9 @@ public class LoquatMadness {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(LoquatMadness_Items.LOQUAT);
+            event.accept(LoquatMadness_Items.BURNING_LOQUAT);
         }
     }
 

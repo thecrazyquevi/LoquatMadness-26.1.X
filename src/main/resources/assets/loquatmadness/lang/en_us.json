@@ -1,3 +1,8 @@
 {
-  "item.loquatmadness.loquat": "Loquat"
+  "item.loquatmadness.loquat": "Loquat",
+  "item.loquatmadness.burning_loquat": "Burning Loquat",
+
+
+
+  "creativetab.loquatmadness.loquat_madness_items": "Loquat Madness Items"
 }
