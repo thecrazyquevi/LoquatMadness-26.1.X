@@ -16,6 +16,9 @@ public class LoquatMadness_Items {
     public static final DeferredItem<Item> BURNING_LOQUAT = ITEMS.registerItem("burning_loquat",
             properties -> new Item(properties.food(ModFoods.PLUS_LOQUAT, ModFoods.BURNING_LOQUAT_CONSUMABLE)));
 
+    public static final DeferredItem<Item> LOQUAT_SKIN = ITEMS.registerSimpleItem("loquat_skin");
+    public static final DeferredItem<Item> RODQUAT = ITEMS.registerSimpleItem("rodquat");
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

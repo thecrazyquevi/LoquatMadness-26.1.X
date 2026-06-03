@@ -54,6 +54,11 @@ public class LoquatMadness {
             event.accept(LoquatMadness_Items.LOQUAT);
             event.accept(LoquatMadness_Items.BURNING_LOQUAT);
         }
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(LoquatMadness_Items.LOQUAT_SKIN);
+            event.accept(LoquatMadness_Items.RODQUAT);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -22,8 +22,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(LoquatMadness_Items.LOQUAT);
                         output.accept(LoquatMadness_Items.BURNING_LOQUAT);
-
-
+                        output.accept(LoquatMadness_Items.LOQUAT_SKIN);
+                        output.accept(LoquatMadness_Items.RODQUAT);
 
 
 

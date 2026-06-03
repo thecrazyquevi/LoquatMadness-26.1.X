@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "loquat",
+  "key": {
+    "A": "loquatmadness:loquat_skin",
+    "B": "minecraft:stick"
+  },
+  "pattern": [
+    "AB",
+    "BA"
+  ],
+  "result": {
+    "id": "loquatmadness:rodquat"
+  }
+}
