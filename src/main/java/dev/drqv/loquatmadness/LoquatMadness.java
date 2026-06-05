@@ -1,5 +1,6 @@
 package dev.drqv.loquatmadness;
 
+import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import dev.drqv.loquatmadness.creativemodetab.ModCreativeModeTabs;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import org.slf4j.Logger;
@@ -36,6 +37,7 @@ public class LoquatMadness {
         ModCreativeModeTabs.register(modEventBus);
 
         LoquatMadness_Items.register(modEventBus);
+        LoquatMadness_Blocks.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
@@ -58,6 +60,12 @@ public class LoquatMadness {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(LoquatMadness_Items.LOQUAT_SKIN);
             event.accept(LoquatMadness_Items.RODQUAT);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(LoquatMadness_Blocks.LOQUAT_LOG);
+            event.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);
+            event.accept(LoquatMadness_Blocks.LOQUAT_PLANKS);
         }
     }
 

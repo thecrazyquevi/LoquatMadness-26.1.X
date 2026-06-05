@@ -1,6 +1,7 @@
 package dev.drqv.loquatmadness.creativemodetab;
 
 import dev.drqv.loquatmadness.LoquatMadness;
+import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -24,6 +25,10 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Items.BURNING_LOQUAT);
                         output.accept(LoquatMadness_Items.LOQUAT_SKIN);
                         output.accept(LoquatMadness_Items.RODQUAT);
+
+                        output.accept(LoquatMadness_Blocks.LOQUAT_LOG);
+                        output.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_PLANKS);
 
 
 

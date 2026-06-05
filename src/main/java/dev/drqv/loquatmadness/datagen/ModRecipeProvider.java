@@ -1,5 +1,6 @@
 package dev.drqv.loquatmadness.datagen;
 
+import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -46,6 +47,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_loquat_skin", has(LoquatMadness_Items.LOQUAT_SKIN.get()))
                 .save(output);
 
+        shapeless(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_PLANKS.get(), 4)
+                .requires(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get(), 1)
+                .unlockedBy(getHasName(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()), has(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()))
+                .group("loquat")
+                .save(output, "loquatmadness:loquat_planks_from_stripped_loquat_log");
 
+        shapeless(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_PLANKS.get(), 4)
+                .requires(LoquatMadness_Blocks.LOQUAT_LOG.get(), 1)
+                .unlockedBy(getHasName(LoquatMadness_Blocks.LOQUAT_LOG.get()), has(LoquatMadness_Blocks.LOQUAT_LOG.get()))
+                .group("loquat")
+                .save(output);
     }
 }
