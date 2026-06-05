@@ -58,5 +58,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(LoquatMadness_Blocks.LOQUAT_LOG.get()), has(LoquatMadness_Blocks.LOQUAT_LOG.get()))
                 .group("loquat")
                 .save(output);
+
+
     }
 }

@@ -1,6 +1,7 @@
 {
   "item.loquatmadness.loquat": "Loquat",
   "item.loquatmadness.loquat_skin": "Loquat Skin",
+  "item.loquatmadness.candy_loquat": "Candy Loquat",
   "item.loquatmadness.burning_loquat": "Burning Loquat",
   "item.loquatmadness.rodquat": "Rodquat",
 
@@ -9,5 +10,10 @@
   "block.loquatmadness.loquat_log": "Loquat Log",
 
 
-  "creativetab.loquatmadness.loquat_madness_items": "Loquat Madness Items"
+  "creativetab.loquatmadness.loquat_madness_items": "Loquat Madness Items",
+
+  "tooltip.loquatmadness.burning_loquat": "§8Press [§eAlt§r§8] for more information.",
+  "tooltip.loquatmadness.burning_loquat.shift_down": "§8Gives you §cFire Resistance I§r §8for §630 seconds§r§8.",
+  "tooltip.loquatmadness.candy_loquat": "§8Press [§eAlt§r§8] for more information.",
+  "tooltip.loquatmadness.candy_loquat.shift_down": "§8Gives you §bSpeed I§r §8for §630 seconds§r§8."
 }

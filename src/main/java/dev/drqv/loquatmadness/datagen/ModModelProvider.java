@@ -22,6 +22,7 @@ public class ModModelProvider extends ModelProvider {
         /* items */
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_SKIN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.CANDY_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.BURNING_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.RODQUAT.get(), ModelTemplates.FLAT_ITEM);
 

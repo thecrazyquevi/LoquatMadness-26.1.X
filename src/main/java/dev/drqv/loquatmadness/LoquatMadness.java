@@ -54,6 +54,7 @@ public class LoquatMadness {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(LoquatMadness_Items.LOQUAT);
+            event.accept(LoquatMadness_Items.CANDY_LOQUAT);
             event.accept(LoquatMadness_Items.BURNING_LOQUAT);
         }
 

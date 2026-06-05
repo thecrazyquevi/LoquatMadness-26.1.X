@@ -16,4 +16,7 @@ public class ModFoods {
     public static final Consumable BURNING_LOQUAT_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.6F).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0)))
             .build();
+    public static final Consumable CANDY_LOQUAT_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.6F).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 600, 0)))
+            .build();
 }
