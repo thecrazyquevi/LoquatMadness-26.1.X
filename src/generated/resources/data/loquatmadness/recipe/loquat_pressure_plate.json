@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "loquatmadness:loquat_planks"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "loquatmadness:loquat_pressure_plate"
+  }
+}

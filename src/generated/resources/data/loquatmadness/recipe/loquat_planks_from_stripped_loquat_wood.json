@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "loquat",
+  "ingredients": [
+    "loquatmadness:stripped_loquat_wood"
+  ],
+  "result": {
+    "count": 4,
+    "id": "loquatmadness:loquat_planks"
+  }
+}

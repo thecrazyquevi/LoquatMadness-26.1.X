@@ -28,10 +28,16 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Items.RODQUAT);
 
                         output.accept(LoquatMadness_Blocks.LOQUAT_LOG);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_WOOD);
                         output.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);
+                        output.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD);
                         output.accept(LoquatMadness_Blocks.LOQUAT_PLANKS);
-
-
+                        output.accept(LoquatMadness_Blocks.LOQUAT_STAIRS);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_SLAB);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_FENCE);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_FENCE_GATE);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
 
                     }).build());
 

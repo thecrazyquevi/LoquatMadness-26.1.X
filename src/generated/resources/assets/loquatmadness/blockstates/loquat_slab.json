@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "loquatmadness:block/loquat_slab"
+    },
+    "type=double": {
+      "model": "loquatmadness:block/loquat_planks"
+    },
+    "type=top": {
+      "model": "loquatmadness:block/loquat_slab_top"
+    }
+  }
+}

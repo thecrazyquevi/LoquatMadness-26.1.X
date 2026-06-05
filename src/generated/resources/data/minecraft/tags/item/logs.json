@@ -1,6 +1,8 @@
 {
   "values": [
     "loquatmadness:loquat_log",
-    "loquatmadness:stripped_loquat_log"
+    "loquatmadness:stripped_loquat_log",
+    "loquatmadness:stripped_loquat_wood",
+    "loquatmadness:loquat_wood"
   ]
 }

@@ -8,6 +8,9 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -58,6 +61,45 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(LoquatMadness_Blocks.LOQUAT_LOG.get()), has(LoquatMadness_Blocks.LOQUAT_LOG.get()))
                 .group("loquat")
                 .save(output);
+
+        stairBuilder(LoquatMadness_Blocks.LOQUAT_STAIRS.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        slab(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_SLAB.get(), LoquatMadness_Blocks.LOQUAT_PLANKS.get());
+
+        buttonBuilder(LoquatMadness_Blocks.LOQUAT_BUTTON.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        pressurePlate(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE.get(), LoquatMadness_Blocks.LOQUAT_PLANKS.get());
+
+        fenceBuilder(LoquatMadness_Blocks.LOQUAT_FENCE.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        fenceGateBuilder(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        woodFromLogs(LoquatMadness_Blocks.LOQUAT_WOOD.get(), LoquatMadness_Blocks.LOQUAT_LOG.get());
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_PLANKS.get(), 4)
+                .requires(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get(), 1)
+                .unlockedBy("has_loquat_wood", has(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get()))
+                .group("loquat")
+                .save(output, "loquatmadness:loquat_planks_from_stripped_loquat_wood");
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_PLANKS.get(), 4)
+                .requires(LoquatMadness_Blocks.LOQUAT_WOOD.get(), 1)
+                .unlockedBy("has_loquat_wood", has(LoquatMadness_Blocks.LOQUAT_WOOD.get()))
+                .group("loquat")
+                .save(output, "loquatmadness:loquat_planks_from_loquat_wood");
+
 
 
     }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "loquatmadness:block/loquat_planks"
+  }
+}

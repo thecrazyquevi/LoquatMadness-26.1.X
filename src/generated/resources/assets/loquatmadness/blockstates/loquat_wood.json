@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "loquatmadness:block/loquat_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "loquatmadness:block/loquat_wood"
+    },
+    "axis=z": {
+      "model": "loquatmadness:block/loquat_wood",
+      "x": 90
+    }
+  }
+}

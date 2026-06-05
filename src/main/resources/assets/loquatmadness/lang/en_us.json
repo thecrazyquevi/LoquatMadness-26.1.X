@@ -7,7 +7,15 @@
 
   "block.loquatmadness.loquat_planks": "Loquat Planks",
   "block.loquatmadness.stripped_loquat_log": "Stripped Loquat Log",
+  "block.loquatmadness.stripped_loquat_wood": "Stripped Loquat Wood",
   "block.loquatmadness.loquat_log": "Loquat Log",
+  "block.loquatmadness.loquat_wood": "Loquat Wood",
+  "block.loquatmadness.loquat_stairs": "Loquat Stairs",
+  "block.loquatmadness.loquat_slab": "Loquat Slab",
+  "block.loquatmadness.loquat_pressure_plate": "Loquat Pressure Plate",
+  "block.loquatmadness.loquat_button": "Loquat Button",
+  "block.loquatmadness.loquat_fence": "Loquat Fence",
+  "block.loquatmadness.loquat_fence_gate": "Loquat Fence Gate",
 
 
   "creativetab.loquatmadness.loquat_madness_items": "Loquat Madness Items",

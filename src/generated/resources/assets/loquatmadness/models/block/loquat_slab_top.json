@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "loquatmadness:block/loquat_planks",
+    "side": "loquatmadness:block/loquat_planks",
+    "top": "loquatmadness:block/loquat_planks"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_loquat_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquat_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "loquatmadness:loquat_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_loquat_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "loquatmadness:loquat_button"
+    ]
+  }
+}

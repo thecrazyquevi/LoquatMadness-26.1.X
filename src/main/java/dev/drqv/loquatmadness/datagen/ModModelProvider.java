@@ -24,12 +24,22 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_SKIN.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.CANDY_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.BURNING_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(LoquatMadness_Items.RODQUAT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.RODQUAT.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* bloques */
-        blockModels.createTrivialCube(LoquatMadness_Blocks.LOQUAT_PLANKS.get());
-        blockModels.woodProvider(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()).log(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get());
-        blockModels.woodProvider(LoquatMadness_Blocks.LOQUAT_LOG.get()).log(LoquatMadness_Blocks.LOQUAT_LOG.get());
+        // blockModels.createTrivialCube(LoquatMadness_Blocks.LOQUAT_PLANKS.get()); está oculto porque ya está en las familias
+        blockModels.woodProvider(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()).log(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()).wood(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get());;
+        blockModels.woodProvider(LoquatMadness_Blocks.LOQUAT_LOG.get()).log(LoquatMadness_Blocks.LOQUAT_LOG.get()).wood(LoquatMadness_Blocks.LOQUAT_WOOD.get());;
+
+
+        /* familias */
+        blockModels.family(LoquatMadness_Blocks.LOQUAT_PLANKS.get())
+                .stairs(LoquatMadness_Blocks.LOQUAT_STAIRS.get())
+                .slab(LoquatMadness_Blocks.LOQUAT_SLAB.get())
+                .pressurePlate(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE.get())
+                .button(LoquatMadness_Blocks.LOQUAT_BUTTON.get())
+                .fence(LoquatMadness_Blocks.LOQUAT_FENCE.get())
+                .fenceGate(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
 
     }
 }

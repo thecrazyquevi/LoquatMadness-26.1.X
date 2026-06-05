@@ -2,6 +2,12 @@
   "values": [
     "loquatmadness:loquat_planks",
     "loquatmadness:loquat_log",
-    "loquatmadness:stripped_loquat_log"
+    "loquatmadness:stripped_loquat_log",
+    "loquatmadness:loquat_stairs",
+    "loquatmadness:loquat_slab",
+    "loquatmadness:loquat_pressure_plate",
+    "loquatmadness:loquat_button",
+    "loquatmadness:loquat_fence",
+    "loquatmadness:loquat_fence_gate"
   ]
 }

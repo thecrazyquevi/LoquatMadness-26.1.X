@@ -65,8 +65,16 @@ public class LoquatMadness {
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(LoquatMadness_Blocks.LOQUAT_LOG);
+            event.accept(LoquatMadness_Blocks.LOQUAT_WOOD);
             event.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);
+            event.accept(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD);
             event.accept(LoquatMadness_Blocks.LOQUAT_PLANKS);
+            event.accept(LoquatMadness_Blocks.LOQUAT_STAIRS);
+            event.accept(LoquatMadness_Blocks.LOQUAT_SLAB);
+            event.accept(LoquatMadness_Blocks.LOQUAT_FENCE);
+            event.accept(LoquatMadness_Blocks.LOQUAT_FENCE_GATE);
+            event.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
+            event.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
         }
     }
 

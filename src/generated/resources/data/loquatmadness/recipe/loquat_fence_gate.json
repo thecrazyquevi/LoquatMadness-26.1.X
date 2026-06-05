@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "loquat",
+  "key": {
+    "#": "minecraft:stick",
+    "W": "loquatmadness:loquat_planks"
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "id": "loquatmadness:loquat_fence_gate"
+  }
+}
