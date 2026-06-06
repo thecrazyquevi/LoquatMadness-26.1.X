@@ -19,36 +19,29 @@ public class LoquatMadness_Blocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(LoquatMadness.MOD_ID);
 
-
     public static final DeferredBlock<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
             properties -> new Block(properties.strength(2f, 3f)
-                    .sound(SoundType.CHERRY_WOOD)
-                    .ignitedByLava()));
+                    .sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> STRIPPED_LOQUAT_LOG = registerBlock("stripped_loquat_log",
             properties -> new RotatedPillarBlock(properties.strength(2f)
-                    .sound(SoundType.CHERRY_WOOD)
-                    .ignitedByLava()));
+                    .sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> LOQUAT_LOG = registerBlock("loquat_log",
             properties -> new RotatedPillarBlock(properties.strength(2f)
-                    .sound(SoundType.CHERRY_WOOD)
-                    .ignitedByLava()));
+                    .sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> STRIPPED_LOQUAT_WOOD = registerBlock("stripped_loquat_wood",
             properties -> new RotatedPillarBlock(properties.strength(2f)
-                    .sound(SoundType.CHERRY_WOOD)
-                    .ignitedByLava()));
+                    .sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> LOQUAT_WOOD = registerBlock("loquat_wood",
             properties -> new RotatedPillarBlock(properties.strength(2f)
-                    .sound(SoundType.CHERRY_WOOD)
-                    .ignitedByLava()));
+                    .sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> LOQUAT_STAIRS = registerBlock("loquat_stairs",
             properties -> new StairBlock(LoquatMadness_Blocks.LOQUAT_PLANKS.get().defaultBlockState(),
-                    properties.strength(2f).sound(SoundType.CHERRY_WOOD)
-                            .ignitedByLava()));
+                    properties.strength(2f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> LOQUAT_SLAB = registerBlock("loquat_slab",
             properties -> new SlabBlock(properties.strength(2f, 3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
@@ -60,7 +53,7 @@ public class LoquatMadness_Blocks {
                     .ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> LOQUAT_BUTTON = registerBlock("loquat_button",
-            properties -> new ButtonBlock(BlockSetType.CHERRY, 20, properties
+            properties -> new ButtonBlock(BlockSetType.CHERRY, 30, properties
                     .noCollision().strength(0.5f)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
@@ -71,7 +64,6 @@ public class LoquatMadness_Blocks {
     public static final DeferredBlock<Block> LOQUAT_FENCE_GATE = registerBlock("loquat_fence_gate",
             properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f)
                     .ignitedByLava().sound(SoundType.CHERRY_WOOD)));
-
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

@@ -1,0 +1,16 @@
+{
+  "values": {
+    "loquatmadness:loquat": {
+      "replace": true,
+      "value": {
+        "chance": 0.65
+      }
+    },
+    "loquatmadness:loquat_skin": {
+      "replace": true,
+      "value": {
+        "chance": 0.3
+      }
+    }
+  }
+}

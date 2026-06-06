@@ -5,6 +5,7 @@ import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -54,5 +55,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCE_GATES)
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
+
     }
 }

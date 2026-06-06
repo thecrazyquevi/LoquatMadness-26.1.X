@@ -25,7 +25,7 @@ public class LoquatMadness_Items {
                     .usingConvertsTo(LOQUAT_SKIN.get())));
 
     public static final DeferredItem<Item> BURNING_LOQUAT = ITEMS.registerItem("burning_loquat",
-            properties -> new Item(properties.food(ModFoods.PLUS_LOQUAT, ModFoods.BURNING_LOQUAT_CONSUMABLE)) {
+            properties -> new Item(properties.food(ModFoods.PLUS_LOQUAT, ModFoods.BURNING_LOQUAT_CONSUMABLE).fireResistant()) {
                 @Override
                 public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
                     if(Minecraft.getInstance().hasAltDown()) {

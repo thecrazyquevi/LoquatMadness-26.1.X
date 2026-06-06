@@ -87,6 +87,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         woodFromLogs(LoquatMadness_Blocks.LOQUAT_WOOD.get(), LoquatMadness_Blocks.LOQUAT_LOG.get());
+        woodFromLogs(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get(), LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get());
 
         shapeless(RecipeCategory.BUILDING_BLOCKS, LoquatMadness_Blocks.LOQUAT_PLANKS.get(), 4)
                 .requires(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get(), 1)

@@ -3,6 +3,7 @@ package dev.drqv.loquatmadness;
 import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import dev.drqv.loquatmadness.creativemodetab.ModCreativeModeTabs;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
+import net.minecraft.world.level.block.FireBlock;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;

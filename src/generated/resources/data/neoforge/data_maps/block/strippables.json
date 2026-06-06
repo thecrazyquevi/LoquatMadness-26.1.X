@@ -2,6 +2,9 @@
   "values": {
     "loquatmadness:loquat_log": {
       "stripped_block": "loquatmadness:stripped_loquat_log"
+    },
+    "loquatmadness:loquat_wood": {
+      "stripped_block": "loquatmadness:stripped_loquat_wood"
     }
   }
 }
