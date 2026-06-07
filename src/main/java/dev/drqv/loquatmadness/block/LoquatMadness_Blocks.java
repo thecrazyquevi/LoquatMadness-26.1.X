@@ -1,10 +1,12 @@
 package dev.drqv.loquatmadness.block;
 
+import com.mojang.serialization.MapCodec;
 import dev.drqv.loquatmadness.LoquatMadness;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -64,6 +66,14 @@ public class LoquatMadness_Blocks {
     public static final DeferredBlock<Block> LOQUAT_FENCE_GATE = registerBlock("loquat_fence_gate",
             properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f)
                     .ignitedByLava().sound(SoundType.CHERRY_WOOD)));
+
+    public static final DeferredBlock<Block> LOQUAT_DOOR = registerBlock("loquat_door",
+            properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f)
+                    .ignitedByLava().sound(SoundType.CHERRY_WOOD).noOcclusion()));
+
+    public static final DeferredBlock<Block> LOQUAT_TRAPDOOR = registerBlock("loquat_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.CHERRY, properties.strength(2f)
+                    .ignitedByLava().sound(SoundType.CHERRY_WOOD).noOcclusion()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

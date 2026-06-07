@@ -8,6 +8,8 @@
     "loquatmadness:loquat_pressure_plate",
     "loquatmadness:loquat_button",
     "loquatmadness:loquat_fence",
-    "loquatmadness:loquat_fence_gate"
+    "loquatmadness:loquat_fence_gate",
+    "loquatmadness:loquat_door",
+    "loquatmadness:loquat_trapdoor"
   ]
 }

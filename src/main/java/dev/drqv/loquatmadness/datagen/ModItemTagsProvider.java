@@ -45,5 +45,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.FENCE_GATES)
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get().asItem());
 
+        tag(ItemTags.WOODEN_DOORS)
+                .add(LoquatMadness_Blocks.LOQUAT_DOOR.get().asItem());
+
+        tag(ItemTags.WOODEN_TRAPDOORS)
+                .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get().asItem());
+
     }
 }

@@ -53,6 +53,7 @@ public class LoquatMadness_Items {
             });
 
     public static final DeferredItem<Item> RODQUAT = ITEMS.registerSimpleItem("rodquat");
+    public static final DeferredItem<Item> LOQUATNITE_FRAGMENT = ITEMS.registerSimpleItem("loquatnite_fragment");
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

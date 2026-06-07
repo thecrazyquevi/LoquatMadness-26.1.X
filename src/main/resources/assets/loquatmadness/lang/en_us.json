@@ -4,6 +4,7 @@
   "item.loquatmadness.candy_loquat": "Candy Loquat",
   "item.loquatmadness.burning_loquat": "Burning Loquat",
   "item.loquatmadness.rodquat": "Rodquat",
+  "item.loquatmadness.loquatnite_fragment": "Loquatnite Fragment",
 
   "block.loquatmadness.loquat_planks": "Loquat Planks",
   "block.loquatmadness.stripped_loquat_log": "Stripped Loquat Log",
@@ -16,9 +17,11 @@
   "block.loquatmadness.loquat_button": "Loquat Button",
   "block.loquatmadness.loquat_fence": "Loquat Fence",
   "block.loquatmadness.loquat_fence_gate": "Loquat Fence Gate",
+  "block.loquatmadness.loquat_door": "Loquat Door",
+  "block.loquatmadness.loquat_trapdoor": "Loquat Trapdoor",
 
 
-  "creativetab.loquatmadness.loquat_madness_items": "Loquat Madness Items",
+  "creativetab.loquatmadness.loquat_madness": "Loquat Madness",
 
   "tooltip.loquatmadness.burning_loquat": "§8Press [§eAlt§r§8] for more information.",
   "tooltip.loquatmadness.burning_loquat.shift_down": "§8Gives you §cFire Resistance I§r §8for §630 seconds§r§8.",

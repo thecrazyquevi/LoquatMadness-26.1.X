@@ -27,7 +27,8 @@ public class ModDataMapProvider extends DataMapProvider {
     protected void gather(HolderLookup.Provider provider) {
 
         builder(NeoForgeDataMaps.FURNACE_FUELS)
-                .add(LoquatMadness_Items.LOQUAT_SKIN.getId(), new FurnaceFuel(100), false);
+                .add(LoquatMadness_Items.LOQUAT_SKIN.getId(), new FurnaceFuel(100), false)
+                .add(LoquatMadness_Items.RODQUAT.getId(), new FurnaceFuel(120), false);
 
         builder(NeoForgeDataMaps.STRIPPABLES)
                 .add(LoquatMadness_Blocks.LOQUAT_LOG.getId(), new Strippable(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get()), false)
@@ -35,6 +36,7 @@ public class ModDataMapProvider extends DataMapProvider {
 
         builder(NeoForgeDataMaps.COMPOSTABLES)
                 .add(LoquatMadness_Items.LOQUAT.getId(), new Compostable(0.65f), true)
+                .add(LoquatMadness_Items.CANDY_LOQUAT.getId(), new Compostable(0.65f), true)
                 .add(LoquatMadness_Items.LOQUAT_SKIN.getId(), new Compostable(0.3f), true);
 
     }

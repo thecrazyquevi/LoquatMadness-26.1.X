@@ -1,5 +1,11 @@
 {
   "values": {
+    "loquatmadness:candy_loquat": {
+      "replace": true,
+      "value": {
+        "chance": 0.65
+      }
+    },
     "loquatmadness:loquat": {
       "replace": true,
       "value": {

@@ -19,13 +19,8 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> LOQUAT_MADNESS_TAB = CREATIVE_MODE_TABS.register("loquat_madness_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(LoquatMadness_Items.LOQUAT.get()))
-                    .title(Component.translatable("creativetab.loquatmadness.loquat_madness_items"))
+                    .title(Component.translatable("creativetab.loquatmadness.loquat_madness"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(LoquatMadness_Items.LOQUAT);
-                        output.accept(LoquatMadness_Items.CANDY_LOQUAT);
-                        output.accept(LoquatMadness_Items.BURNING_LOQUAT);
-                        output.accept(LoquatMadness_Items.LOQUAT_SKIN);
-                        output.accept(LoquatMadness_Items.RODQUAT);
 
                         output.accept(LoquatMadness_Blocks.LOQUAT_LOG);
                         output.accept(LoquatMadness_Blocks.LOQUAT_WOOD);
@@ -36,8 +31,18 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Blocks.LOQUAT_SLAB);
                         output.accept(LoquatMadness_Blocks.LOQUAT_FENCE);
                         output.accept(LoquatMadness_Blocks.LOQUAT_FENCE_GATE);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_DOOR);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_TRAPDOOR);
                         output.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
                         output.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
+
+                        output.accept(LoquatMadness_Items.LOQUAT);
+                        output.accept(LoquatMadness_Items.CANDY_LOQUAT);
+                        output.accept(LoquatMadness_Items.BURNING_LOQUAT);
+                        output.accept(LoquatMadness_Items.LOQUAT_SKIN);
+                        output.accept(LoquatMadness_Items.RODQUAT);
+                        output.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
+
 
                     }).build());
 

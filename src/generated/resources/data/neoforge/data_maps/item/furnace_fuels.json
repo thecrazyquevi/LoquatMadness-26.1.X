@@ -2,6 +2,9 @@
   "values": {
     "loquatmadness:loquat_skin": {
       "burn_time": 100
+    },
+    "loquatmadness:rodquat": {
+      "burn_time": 120
     }
   }
 }

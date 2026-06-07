@@ -40,6 +40,8 @@ public class LoquatMadness {
         LoquatMadness_Items.register(modEventBus);
         LoquatMadness_Blocks.register(modEventBus);
 
+        
+
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -62,6 +64,7 @@ public class LoquatMadness {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(LoquatMadness_Items.LOQUAT_SKIN);
             event.accept(LoquatMadness_Items.RODQUAT);
+            event.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -74,6 +77,8 @@ public class LoquatMadness {
             event.accept(LoquatMadness_Blocks.LOQUAT_SLAB);
             event.accept(LoquatMadness_Blocks.LOQUAT_FENCE);
             event.accept(LoquatMadness_Blocks.LOQUAT_FENCE_GATE);
+            event.accept(LoquatMadness_Blocks.LOQUAT_DOOR);
+            event.accept(LoquatMadness_Blocks.LOQUAT_TRAPDOOR);
             event.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
             event.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
         }

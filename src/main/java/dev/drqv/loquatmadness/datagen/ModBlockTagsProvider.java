@@ -27,7 +27,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE.get())
                 .add(LoquatMadness_Blocks.LOQUAT_BUTTON.get())
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE.get())
-                .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
+                .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get())
+                .add(LoquatMadness_Blocks.LOQUAT_DOOR.get())
+                .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
 
         tag(BlockTags.PLANKS)
                 .add(LoquatMadness_Blocks.LOQUAT_PLANKS.get());
@@ -55,6 +57,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCE_GATES)
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
+
+        tag(BlockTags.WOODEN_DOORS)
+                .add(LoquatMadness_Blocks.LOQUAT_DOOR.get());
+
+        tag(BlockTags.WOODEN_TRAPDOORS)
+                .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
 
     }
 }

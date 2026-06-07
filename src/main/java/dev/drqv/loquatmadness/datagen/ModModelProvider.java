@@ -24,6 +24,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_SKIN.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.CANDY_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.BURNING_LOQUAT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE_FRAGMENT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.RODQUAT.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* bloques */
@@ -39,7 +40,9 @@ public class ModModelProvider extends ModelProvider {
                 .pressurePlate(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE.get())
                 .button(LoquatMadness_Blocks.LOQUAT_BUTTON.get())
                 .fence(LoquatMadness_Blocks.LOQUAT_FENCE.get())
-                .fenceGate(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
+                .fenceGate(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get())
+                .door(LoquatMadness_Blocks.LOQUAT_DOOR.get())
+                .trapdoor(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
 
     }
 }

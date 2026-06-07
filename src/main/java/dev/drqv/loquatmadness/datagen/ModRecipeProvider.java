@@ -9,8 +9,12 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
+import net.minecraft.world.item.crafting.SmokingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.brewing.BrewingRecipe;
+import net.neoforged.neoforge.common.brewing.IBrewingRecipe;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -101,6 +105,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("loquat")
                 .save(output, "loquatmadness:loquat_planks_from_loquat_wood");
 
+        doorBuilder(LoquatMadness_Blocks.LOQUAT_DOOR.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        trapdoorBuilder(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        simpleCookingRecipe("loquat_skin", SmeltingRecipe::new, 200, LoquatMadness_Items.LOQUAT.get(), LoquatMadness_Items.LOQUAT_SKIN.get(), 0.2f);
 
 
     }

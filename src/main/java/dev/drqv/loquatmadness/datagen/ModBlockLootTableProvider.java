@@ -26,8 +26,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(LoquatMadness_Blocks.LOQUAT_BUTTON.get());
         dropSelf(LoquatMadness_Blocks.LOQUAT_FENCE.get());
         dropSelf(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get());
+        dropSelf(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
 
         add(LoquatMadness_Blocks.LOQUAT_SLAB.get(), this::createSlabItemTable);
+        add(LoquatMadness_Blocks.LOQUAT_DOOR.get(), this::createDoorTable);
     }
 
     @Override
