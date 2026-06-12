@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_loquat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "loquatmadness:candy_loquat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_loquat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "loquatmadness:candy_loquat"
+    ]
+  }
+}

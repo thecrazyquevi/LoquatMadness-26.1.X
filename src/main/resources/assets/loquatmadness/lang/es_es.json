@@ -1,0 +1,49 @@
+{
+  "item.loquatmadness.loquat": "Níspero",
+  "item.loquatmadness.loquat_skin": "Piel de níspero",
+  "item.loquatmadness.candy_loquat": "Níspero caramelizado",
+  "item.loquatmadness.burning_loquat": "Níspero ardiente",
+  "item.loquatmadness.rodquat": "Nispalo",
+  "item.loquatmadness.loquatnite_fragment": "Fragmento de nisperita",
+  "item.loquatmadness.loquatnite": "Nisperita",
+  "item.loquatmadness.loquatnite_hoe": "Azada de nisperita",
+  "item.loquatmadness.loquat_propagule": "Propágulo de níspero",
+  "item.loquatmadness.loquat_boat": "Barca de níspero",
+  "item.loquatmadness.loquat_chest_boat": "Barca de níspero con cofre",
+
+
+  "item.loquatmadness.loquat_sign": "Cartel de níspero",
+  "item.loquatmadness.loquat_hanging_sign": "Cartel colgante de níspero",
+
+
+  "block.loquatmadness.loquat_planks": "Tablones de níspero",
+  "block.loquatmadness.stripped_loquat_log": "Tronco de níspero sin corteza",
+  "block.loquatmadness.stripped_loquat_wood": "Leño de níspero sin corteza",
+  "block.loquatmadness.loquat_log": "Tronco de níspero",
+  "block.loquatmadness.loquat_wood": "Leño de níspero",
+  "block.loquatmadness.loquat_stairs": "Escaleras de níspero",
+  "block.loquatmadness.loquat_slab": "Losa de níspero",
+  "block.loquatmadness.loquat_pressure_plate": "Placa de presión de níspero",
+  "block.loquatmadness.loquat_button": "Botón de níspero",
+  "block.loquatmadness.loquat_fence": "Valla de níspero",
+  "block.loquatmadness.loquat_fence_gate": "Puerta de valla de níspero",
+  "block.loquatmadness.loquat_door": "Puerta de níspero",
+  "block.loquatmadness.loquat_trapdoor": "Trampilla de níspero",
+  "block.loquatmadness.loquat_leaves": "Hojas de níspero",
+  "block.loquatmadness.loquat_fruit_leaves": "Hojas frutadas de níspero",
+  "block.loquatmadness.loquat_propagule": "Propágulo de níspero",
+  "block.loquatmadness.loquat_shelf": "Estante de níspero",
+
+  "entity.loquatmadness.loquat_chest_boat": "Barca de níspero con cofre",
+
+
+  "creativetab.loquatmadness.loquat_madness": "Loquat Madness",
+
+
+  "tooltip.loquatmadness.burning_loquat": "§8Presiona [§eAlt§r§8] para más información.",
+  "tooltip.loquatmadness.burning_loquat.shift_down": "§8Te otorga §cCuerpo ignífugo I§r §8por §630 segundos§r§8.",
+  "tooltip.loquatmadness.candy_loquat": "§8Presiona [§eAlt§r§8] para más información.",
+  "tooltip.loquatmadness.candy_loquat.shift_down": "§8Te otorga §bVelocidad I§r §8por §630 segundos§r§8.",
+  "tooltip.loquatmadness.loquatnite_how.shift_down": "§8Te susurra §aFortuna III§r§8 con un tono §opacífico.§r",
+  "tooltip.loquatmadness.loquatnite_hoe": "§8Presiona [§eAlt§r§8] para más información."
+}

@@ -1,0 +1,139 @@
+{
+  "feature": "loquatmadness:loquat_tree_2",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 14
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:grass_block",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                3,
+                3,
+                0
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -3,
+                3,
+                0
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                3,
+                3
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                3,
+                -3
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                2,
+                3,
+                2
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -2,
+                3,
+                2
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                2,
+                3,
+                -2
+              ],
+              "tag": "minecraft:leaves"
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -2,
+                3,
+                -2
+              ],
+              "tag": "minecraft:leaves"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 0
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

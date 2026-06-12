@@ -35,6 +35,16 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Blocks.LOQUAT_TRAPDOOR);
                         output.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
                         output.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_SIGN);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_HANGING_SIGN);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_SHELF);
+
+                        output.accept(LoquatMadness_Items.LOQUAT_BOAT);
+                        output.accept(LoquatMadness_Items.LOQUAT_CHEST_BOAT);
+
+                        output.accept(LoquatMadness_Blocks.LOQUAT_LEAVES);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_FRUIT_LEAVES);
+                        output.accept(LoquatMadness_Blocks.LOQUAT_PROPAGULE);
 
                         output.accept(LoquatMadness_Items.LOQUAT);
                         output.accept(LoquatMadness_Items.CANDY_LOQUAT);
@@ -42,6 +52,7 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Items.LOQUAT_SKIN);
                         output.accept(LoquatMadness_Items.RODQUAT);
                         output.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
+                        output.accept(LoquatMadness_Items.LOQUATNITE);
 
 
                     }).build());

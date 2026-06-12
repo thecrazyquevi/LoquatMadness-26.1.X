@@ -1,9 +1,15 @@
 package dev.drqv.loquatmadness;
 
 import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
+import dev.drqv.loquatmadness.block.entity.ModBlockEntities;
 import dev.drqv.loquatmadness.creativemodetab.ModCreativeModeTabs;
+import dev.drqv.loquatmadness.entity.ModEntities;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
+import dev.drqv.loquatmadness.worldgen.feature.ModConfiguredFeatures;
+import dev.drqv.loquatmadness.worldgen.feature.ModPlacedFeatures;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.FireBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,6 +42,10 @@ public class LoquatMadness {
         modEventBus.addListener(this::commonSetup);
 
         ModCreativeModeTabs.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         LoquatMadness_Items.register(modEventBus);
         LoquatMadness_Blocks.register(modEventBus);
@@ -50,7 +60,12 @@ public class LoquatMadness {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(
+                    LoquatMadness_Items.LOQUAT_PROPAGULE.getId(),
+                    LoquatMadness_Blocks.POTTED_LOQUAT_PROPAGULE
+            );
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -65,6 +80,17 @@ public class LoquatMadness {
             event.accept(LoquatMadness_Items.LOQUAT_SKIN);
             event.accept(LoquatMadness_Items.RODQUAT);
             event.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
+            event.accept(LoquatMadness_Items.LOQUATNITE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(LoquatMadness_Items.LOQUAT_SIGN);
+            event.accept(LoquatMadness_Items.LOQUAT_HANGING_SIGN);
+            event.accept(LoquatMadness_Blocks.LOQUAT_SHELF);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept((ItemLike) LoquatMadness_Items.LOQUATNITE_HOE);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -81,6 +107,17 @@ public class LoquatMadness {
             event.accept(LoquatMadness_Blocks.LOQUAT_TRAPDOOR);
             event.accept(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE);
             event.accept(LoquatMadness_Blocks.LOQUAT_BUTTON);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(LoquatMadness_Blocks.LOQUAT_LEAVES);
+            event.accept(LoquatMadness_Blocks.LOQUAT_FRUIT_LEAVES);
+            event.accept(LoquatMadness_Blocks.LOQUAT_PROPAGULE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(LoquatMadness_Items.LOQUAT_BOAT);
+            event.accept(LoquatMadness_Items.LOQUAT_CHEST_BOAT);
         }
     }
 

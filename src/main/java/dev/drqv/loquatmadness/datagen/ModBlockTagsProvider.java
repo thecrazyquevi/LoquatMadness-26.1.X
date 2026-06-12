@@ -29,10 +29,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE.get())
                 .add(LoquatMadness_Blocks.LOQUAT_FENCE_GATE.get())
                 .add(LoquatMadness_Blocks.LOQUAT_DOOR.get())
-                .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
+                .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get())
+                .add(LoquatMadness_Blocks.LOQUAT_SIGN.get())
+                .add(LoquatMadness_Blocks.LOQUAT_WOOD.get())
+                .add(LoquatMadness_Blocks.LOQUAT_HANGING_SIGN.get())
+                .add(LoquatMadness_Blocks.LOQUAT_SHELF.get());
 
         tag(BlockTags.PLANKS)
                 .add(LoquatMadness_Blocks.LOQUAT_PLANKS.get());
+
+        tag(BlockTags.LEAVES)
+                .add(LoquatMadness_Blocks.LOQUAT_LEAVES.get());
+
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(LoquatMadness_Blocks.LOQUAT_LEAVES.get());
 
         tag(BlockTags.LOGS)
                 .add(LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get())
@@ -64,5 +74,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.WOODEN_TRAPDOORS)
                 .add(LoquatMadness_Blocks.LOQUAT_TRAPDOOR.get());
 
+        tag(BlockTags.WALL_HANGING_SIGNS)
+                .add(LoquatMadness_Blocks.LOQUAT_WALL_HANGING_SIGN.get());
+
+        tag(BlockTags.WOODEN_SHELVES)
+                .add(LoquatMadness_Blocks.LOQUAT_SHELF.get());
+
+        tag(BlockTags.LEAVES)
+                .add(LoquatMadness_Blocks.LOQUAT_LEAVES.get())
+                .add(LoquatMadness_Blocks.LOQUAT_FRUIT_LEAVES.get());
+
+        tag(BlockTags.SAPLINGS)
+                .add(LoquatMadness_Blocks.LOQUAT_PROPAGULE.get());
     }
 }

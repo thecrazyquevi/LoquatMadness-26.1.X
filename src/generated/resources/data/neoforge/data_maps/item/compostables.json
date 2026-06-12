@@ -12,6 +12,24 @@
         "chance": 0.65
       }
     },
+    "loquatmadness:loquat_fruit_leaves": {
+      "replace": true,
+      "value": {
+        "chance": 0.45
+      }
+    },
+    "loquatmadness:loquat_leaves": {
+      "replace": true,
+      "value": {
+        "chance": 0.3
+      }
+    },
+    "loquatmadness:loquat_propagule": {
+      "replace": true,
+      "value": {
+        "chance": 0.3
+      }
+    },
     "loquatmadness:loquat_skin": {
       "replace": true,
       "value": {

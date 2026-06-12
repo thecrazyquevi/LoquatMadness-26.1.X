@@ -10,6 +10,10 @@
     "loquatmadness:loquat_fence",
     "loquatmadness:loquat_fence_gate",
     "loquatmadness:loquat_door",
-    "loquatmadness:loquat_trapdoor"
+    "loquatmadness:loquat_trapdoor",
+    "loquatmadness:loquat_sign",
+    "loquatmadness:loquat_wood",
+    "loquatmadness:loquat_hanging_sign",
+    "loquatmadness:loquat_shelf"
   ]
 }

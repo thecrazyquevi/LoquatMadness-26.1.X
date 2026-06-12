@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "shelf",
+  "key": {
+    "#": "loquatmadness:stripped_loquat_log"
+  },
+  "pattern": [
+    "###",
+    "   ",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "loquatmadness:loquat_shelf"
+  }
+}

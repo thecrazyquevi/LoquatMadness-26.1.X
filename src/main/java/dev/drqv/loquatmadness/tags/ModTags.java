@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> LOQUATNITE_MATERIAL = createTag("loquatnite_material");
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, name));
@@ -20,9 +21,12 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> LOQUATNITE_BARS = createTag("loquatnite_bars");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, name));
+
+
 
         }
     }

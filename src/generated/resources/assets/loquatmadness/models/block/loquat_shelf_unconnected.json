@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_shelf_unconnected",
+  "textures": {
+    "all": "loquatmadness:block/loquat_shelf",
+    "particle": "loquatmadness:block/loquat_planks"
+  }
+}

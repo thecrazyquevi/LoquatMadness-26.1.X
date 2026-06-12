@@ -37,7 +37,10 @@ public class ModDataMapProvider extends DataMapProvider {
         builder(NeoForgeDataMaps.COMPOSTABLES)
                 .add(LoquatMadness_Items.LOQUAT.getId(), new Compostable(0.65f), true)
                 .add(LoquatMadness_Items.CANDY_LOQUAT.getId(), new Compostable(0.65f), true)
-                .add(LoquatMadness_Items.LOQUAT_SKIN.getId(), new Compostable(0.3f), true);
+                .add(LoquatMadness_Items.LOQUAT_SKIN.getId(), new Compostable(0.3f), true)
+                .add(LoquatMadness_Blocks.LOQUAT_LEAVES.getId(), new Compostable(0.3f), true)
+                .add(LoquatMadness_Blocks.LOQUAT_FRUIT_LEAVES.getId(), new Compostable(0.45f), true)
+                .add(LoquatMadness_Blocks.LOQUAT_PROPAGULE.getId(), new Compostable(0.3f), true);
 
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "loquatmadness:block/loquat_propagule"
+  }
+}

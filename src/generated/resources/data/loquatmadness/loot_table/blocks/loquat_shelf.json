@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "minecraft:custom_name"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "loquatmadness:loquat_shelf"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "loquatmadness:blocks/loquat_shelf"
+}

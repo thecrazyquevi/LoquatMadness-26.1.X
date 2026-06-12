@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "loquatmadness:loquat_planks"
+  },
+  "pattern": [
+    "P P",
+    "PPP"
+  ],
+  "result": {
+    "id": "loquatmadness:loquat_boat"
+  }
+}

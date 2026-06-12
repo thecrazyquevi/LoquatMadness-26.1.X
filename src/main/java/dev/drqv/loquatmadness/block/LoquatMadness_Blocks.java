@@ -1,9 +1,16 @@
 package dev.drqv.loquatmadness.block;
 
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.drqv.loquatmadness.LoquatMadness;
+import dev.drqv.loquatmadness.block.custom.*;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +27,10 @@ import java.util.function.Function;
 public class LoquatMadness_Blocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(LoquatMadness.MOD_ID);
+
+    public static final WoodType LOQUAT_WOOD_TYPE = WoodType.register(
+            new WoodType("loquatmadness:loquat", BlockSetType.CHERRY)
+    );
 
     public static final DeferredBlock<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
             properties -> new Block(properties.strength(2f, 3f)
@@ -75,6 +86,73 @@ public class LoquatMadness_Blocks {
             properties -> new TrapDoorBlock(BlockSetType.CHERRY, properties.strength(2f)
                     .ignitedByLava().sound(SoundType.CHERRY_WOOD).noOcclusion()));
 
+    public static final DeferredBlock<Block> LOQUAT_SHELF = registerBlock("loquat_shelf",
+            properties -> new ModShelfBlock(properties.strength(1.5f)
+                    .ignitedByLava().sound(SoundType.SHELF).noOcclusion()));
+
+    public static final DeferredBlock<StandingSignBlock> LOQUAT_SIGN = BLOCKS.registerBlock("loquat_sign",
+            properties -> new ModStandingSignBlock(LOQUAT_WOOD_TYPE, properties
+                    .noCollision().strength(1f).ignitedByLava().sound(SoundType.CHERRY_WOOD)));
+
+    public static final DeferredBlock<WallSignBlock> LOQUAT_WALL_SIGN = BLOCKS.registerBlock("loquat_wall_sign",
+            properties -> new ModWallSignBlock(LOQUAT_WOOD_TYPE, properties
+                    .noCollision().strength(1f).ignitedByLava().sound(SoundType.CHERRY_WOOD)));
+
+    public static final DeferredBlock<CeilingHangingSignBlock> LOQUAT_HANGING_SIGN = BLOCKS.registerBlock("loquat_hanging_sign",
+            properties -> new ModCeilingHangingSignBlock(LOQUAT_WOOD_TYPE, properties
+                    .noCollision().strength(1f).ignitedByLava().sound(SoundType.CHERRY_WOOD)));
+
+    public static final DeferredBlock<WallHangingSignBlock> LOQUAT_WALL_HANGING_SIGN = BLOCKS.registerBlock("loquat_wall_hanging_sign",
+            properties -> new ModWallHangingSignBlock(LOQUAT_WOOD_TYPE, properties
+                    .noCollision().strength(1f).ignitedByLava().sound(SoundType.CHERRY_WOOD)));
+
+    public static final DeferredBlock<Block> LOQUAT_LEAVES = registerBlock("loquat_leaves",
+            properties -> new ModLeavesBlock(properties
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn(LoquatMadness_Blocks::ocelotOrParrot)
+                    .isSuffocating((state, lavel, pos) -> false)
+                    .isViewBlocking((state, lavel, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor(((state, level, pos) -> false))
+            ));
+
+    public static final DeferredBlock<Block> LOQUAT_FRUIT_LEAVES = registerBlock("loquat_fruit_leaves",
+            properties -> new ModFruitLeavesBlock(properties
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn(LoquatMadness_Blocks::ocelotOrParrot)
+                    .isSuffocating((state, lavel, pos) -> false)
+                    .isViewBlocking((state, lavel, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor(((state, level, pos) -> false))
+            ));
+
+    public static final DeferredBlock<Block> LOQUAT_PROPAGULE = BLOCKS.registerBlock("loquat_propagule",
+            properties -> new ModSaplingBlock(properties
+                    .noCollision()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<Block> POTTED_LOQUAT_PROPAGULE = BLOCKS.registerBlock("potted_loquat_propagule",
+            properties -> new FlowerPotBlock(
+                    () -> (FlowerPotBlock) Blocks.FLOWER_POT,
+                    LoquatMadness_Blocks.LOQUAT_PROPAGULE,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)
+            ));
+
+    private static Boolean ocelotOrParrot(BlockState state, BlockGetter level, BlockPos pos, EntityType<?> entity) {
+        return entity == EntityType.OCELOT || entity == EntityType.PARROT;
+    }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

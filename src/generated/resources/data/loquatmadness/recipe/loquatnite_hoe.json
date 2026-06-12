@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "loquat",
+  "key": {
+    "L": "loquatmadness:loquatnite",
+    "R": "loquatmadness:rodquat"
+  },
+  "pattern": [
+    "LL ",
+    " R ",
+    " R "
+  ],
+  "result": {
+    "id": "loquatmadness:loquatnite_hoe"
+  }
+}

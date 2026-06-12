@@ -80,6 +80,8 @@ public class ModRecipeProvider extends RecipeProvider {
 
         pressurePlate(LoquatMadness_Blocks.LOQUAT_PRESSURE_PLATE.get(), LoquatMadness_Blocks.LOQUAT_PLANKS.get());
 
+        shelf(LoquatMadness_Blocks.LOQUAT_SHELF.get(), LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG.get());
+
         fenceBuilder(LoquatMadness_Blocks.LOQUAT_FENCE.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .group("loquat")
@@ -105,6 +107,20 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("loquat")
                 .save(output, "loquatmadness:loquat_planks_from_loquat_wood");
 
+        shapeless(RecipeCategory.FOOD, LoquatMadness_Items.CANDY_LOQUAT.get(), 3)
+                .requires(LoquatMadness_Items.LOQUAT.get(), 3)
+                .requires(Items.SUGAR, 1)
+                .unlockedBy("has_loquat", has(LoquatMadness_Items.LOQUAT.get()))
+                .group("loquat")
+                .save(output);
+
+        shapeless(RecipeCategory.FOOD, LoquatMadness_Items.BURNING_LOQUAT.get(), 3)
+                .requires(LoquatMadness_Items.LOQUAT.get(), 3)
+                .requires(Items.MAGMA_CREAM, 1)
+                .unlockedBy("has_loquat", has(LoquatMadness_Items.LOQUAT.get()))
+                .group("loquat")
+                .save(output);
+
         doorBuilder(LoquatMadness_Blocks.LOQUAT_DOOR.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .group("loquat")
@@ -116,6 +132,48 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         simpleCookingRecipe("loquat_skin", SmeltingRecipe::new, 200, LoquatMadness_Items.LOQUAT.get(), LoquatMadness_Items.LOQUAT_SKIN.get(), 0.2f);
+
+        shaped(RecipeCategory.MISC, LoquatMadness_Items.LOQUATNITE.get(), 1)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', LoquatMadness_Items.LOQUATNITE_FRAGMENT.get())
+                .group("loquat")
+                .unlockedBy("has_loquatnite_fragment", has(LoquatMadness_Items.LOQUATNITE_FRAGMENT.get()))
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, LoquatMadness_Items.LOQUATNITE_HOE.get(), 1)
+                .pattern("LL ")
+                .pattern(" R ")
+                .pattern(" R ")
+                .define('L', LoquatMadness_Items.LOQUATNITE.get())
+                .define('R', LoquatMadness_Items.RODQUAT.get())
+                .group("loquat")
+                .unlockedBy("has_loquatnite", has(LoquatMadness_Items.LOQUATNITE.get()))
+                .save(output);
+
+        shaped(RecipeCategory.TRANSPORTATION, LoquatMadness_Items.LOQUAT_BOAT.get(), 1)
+                .pattern("P P")
+                .pattern("PPP")
+                .define('P', LoquatMadness_Blocks.LOQUAT_PLANKS.get())
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .save(output);
+
+        shaped(RecipeCategory.TRANSPORTATION, LoquatMadness_Items.LOQUAT_CHEST_BOAT.get(), 1)
+                .pattern("C")
+                .pattern("B")
+                .define('C', Items.CHEST)
+                .define('B', LoquatMadness_Items.LOQUAT_BOAT.get())
+                .unlockedBy("has_loquat_boat", has(LoquatMadness_Items.LOQUAT_BOAT.get()))
+                .save(output);
+
+        signBuilder(LoquatMadness_Items.LOQUAT_SIGN.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
+                .group("loquat")
+                .save(output);
+
+        hangingSign(LoquatMadness_Items.LOQUAT_HANGING_SIGN.get(), LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);
+
 
 
     }

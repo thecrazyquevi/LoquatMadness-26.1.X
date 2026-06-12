@@ -30,6 +30,12 @@ public class LoquatMadnessDataGen {
 
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
 
+        generator.addProvider(true, new ModVillagerTradeProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModVillagerTradesTagsProvider(packOutput, lookupProvider));
+
+        generator.addProvider(true, new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
+
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
