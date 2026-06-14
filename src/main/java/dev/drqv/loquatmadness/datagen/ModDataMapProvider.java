@@ -42,6 +42,7 @@ public class ModDataMapProvider extends DataMapProvider {
                 .add(LoquatMadness_Blocks.LOQUAT_LEAVES.getId(), new Compostable(0.3f), true)
                 .add(LoquatMadness_Blocks.LOQUAT_FRUIT_LEAVES.getId(), new Compostable(0.45f), true)
                 .add(LoquatMadness_Blocks.LOQUAT_PROPAGULE.getId(), new Compostable(0.3f), true);
+        
 
     }
 }

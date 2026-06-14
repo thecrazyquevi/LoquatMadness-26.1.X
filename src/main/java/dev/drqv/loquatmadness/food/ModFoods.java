@@ -25,6 +25,6 @@ public class ModFoods {
             .consumeSeconds(1.6F).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 600, 0)))
             .build();
     public static final Consumable MIX_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(1.6F).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1)))
+            .consumeSeconds(1.6F).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1)))
             .build();
 }

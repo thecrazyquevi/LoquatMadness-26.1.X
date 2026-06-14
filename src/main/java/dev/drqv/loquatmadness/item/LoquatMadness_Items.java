@@ -164,7 +164,7 @@ public class LoquatMadness_Items {
                     ModToolMaterial.LOQUATNITE_CORE_MATERIAL,
                     7.0F,
                     -2.8F,
-                    4.5D,
+                    3.5D,
                     1.0D,
                     properties
             )

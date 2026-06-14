@@ -46,7 +46,11 @@ public class RandomEffectsConsumeEffect implements ConsumeEffect {
                     MobEffects.BAD_OMEN,
                     MobEffects.ABSORPTION,
                     MobEffects.MINING_FATIGUE,
+
                     MobEffects.WITHER,
+                    MobEffects.WITHER,
+                    MobEffects.WITHER,
+
                     MobEffects.WIND_CHARGED,
                     MobEffects.WEAVING,
                     MobEffects.UNLUCK,
@@ -56,15 +60,24 @@ public class RandomEffectsConsumeEffect implements ConsumeEffect {
                     MobEffects.HEALTH_BOOST,
                     MobEffects.CONDUIT_POWER,
                     MobEffects.HUNGER,
+
                     MobEffects.INFESTED,
+                    MobEffects.INFESTED,
+
                     MobEffects.DARKNESS,
                     MobEffects.BLINDNESS,
+
                     MobEffects.INSTANT_DAMAGE,
+                    MobEffects.INSTANT_DAMAGE,
+                    MobEffects.INSTANT_DAMAGE,
+
                     MobEffects.WEAKNESS,
                     MobEffects.NAUSEA,
                     MobEffects.OOZING,
                     MobEffects.HERO_OF_THE_VILLAGE,
                     MobEffects.INSTANT_HEALTH,
+
+                    MobEffects.LEVITATION,
                     MobEffects.LEVITATION
             ));
 
@@ -77,7 +90,14 @@ public class RandomEffectsConsumeEffect implements ConsumeEffect {
 
                 player.addEffect(new net.minecraft.world.effect.MobEffectInstance(efectoElegido, 300, 0));
             }
-            player.addEffect(new MobEffectInstance(MobEffects.INSTANT_DAMAGE, 1, 2));
+            float vidaActual = player.getHealth();
+            if (vidaActual > 2.0F) {
+                player.setHealth(2.0F);
+                player.hurt(level.damageSources().magic(), 0.0F);
+            }
+            int ticksDeExpiracion = player.tickCount + 400;
+            player.getPersistentData().putInt("LoquatMadness_DeathTimer", ticksDeExpiracion);
+            
             return true;
         }
         return false;

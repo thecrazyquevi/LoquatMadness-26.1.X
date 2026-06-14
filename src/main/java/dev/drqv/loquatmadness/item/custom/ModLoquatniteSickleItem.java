@@ -27,6 +27,7 @@ public class ModLoquatniteSickleItem extends Item {
     public ModLoquatniteSickleItem(ToolMaterial material, float baseDamage, float attackSpeed, double bonusRange, double bonusRangeAlt, Item.Properties properties) {
         super(properties
                 .durability(material.durability())
+                .enchantable(material.enchantmentValue())
                 .component(DataComponents.ATTRIBUTE_MODIFIERS, createSickleAttributes(baseDamage, attackSpeed, bonusRange, bonusRangeAlt))
                 .component(DataComponents.TOOL, new Tool(List.of(), 1.0F, 1, false))
         );
@@ -71,7 +72,7 @@ public class ModLoquatniteSickleItem extends Item {
                 }
             }
         }
-        
+
         double d0 = -Mth.sin(player.getYRot() * ((float)Math.PI / 180F));
         double d1 = Mth.cos(player.getYRot() * ((float)Math.PI / 180F));
         level.sendParticles(ParticleTypes.SWEEP_ATTACK, player.getX() + d0, player.getY(0.5D), player.getZ() + d1, 1, 0.0D, 0.0D, 0.0D, 0.0D);

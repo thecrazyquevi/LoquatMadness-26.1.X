@@ -84,6 +84,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.SWORDS)
                 .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
 
+        tag(ItemTags.MELEE_WEAPON_ENCHANTABLE)
+                .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
         tag(Tags.Items.INGOTS)
                 .add(LoquatMadness_Items.LOQUATNITE.get().asItem());
 

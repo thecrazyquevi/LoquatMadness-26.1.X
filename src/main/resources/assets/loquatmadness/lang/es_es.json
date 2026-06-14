@@ -44,6 +44,7 @@
 
   "entity.loquatmadness.loquat_chest_boat": "Barca de níspero con cofre",
   "entity.loquatmadness.loquatnite_arrow": "Flecha de nisperita",
+  "entity.loquatmadness.loquat_boat": "Barca de níspero",
 
 
   "creativetab.loquatmadness.loquat_madness": "Loquat Madness",
@@ -59,7 +60,7 @@
   "tooltip.loquatmadness.loquatnite_arrow": "§8Presiona [§eAlt§r§8] para más información.",
   "tooltip.loquatmadness.loquatnitian_amalgamation.shift_down": "§4¿Estás bien?",
   "tooltip.loquatmadness.loquatnitian_amalgamation": "§8Presiona [§eAlt§r§8] para más información.",
-  "tooltip.loquatmadness.chocolate_mix.shift_down": "§8Te otorga §dRegeneración II§r §8por §615 seconds§r§8.",
+  "tooltip.loquatmadness.chocolate_mix.shift_down": "§8Te otorga §dRegeneración II§r §8por §65 segundos§r§8.",
   "tooltip.loquatmadness.chocolate_mix": "§8Presiona [§eAlt§r§8] para más información.",
 
 
@@ -99,5 +100,6 @@
   "advancements.loquatmadness.eat_loquatnitian_amalgamation.description": "Come \"voluntariamente\" una Amalgamación nisperiana.",
 
   "advancements.loquatmadness.survive_amalgamation.title": "¡Dios te quiere!",
-  "advancements.loquatmadness.survive_amalgamation.description": "Sobrevive por al menos 10 segundos a la ingesta de una Amalgamación nisperiana."
+  "advancements.loquatmadness.survive_amalgamation.description": "Sobrevive por al menos 10 segundos a la ingesta de una Amalgamación nisperiana.",
+  "death.attack.loquatmadness.overdose": "%1$s tuvo un ataque cardiaco."
 }

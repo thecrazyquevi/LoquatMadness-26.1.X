@@ -43,6 +43,7 @@
 
   "entity.loquatmadness.loquat_chest_boat": "Loquat Boat with Chest",
   "entity.loquatmadness.loquatnite_arrow": "Loquatnite Arrow",
+  "entity.loquatmadness.loquat_boat": "Loquat Boat",
 
 
   "creativetab.loquatmadness.loquat_madness": "Loquat Madness",
@@ -57,7 +58,7 @@
   "tooltip.loquatmadness.loquatnite_arrow": "§8Press [§eAlt§r§8] for more information.",
   "tooltip.loquatmadness.loquatnitian_amalgamation.shift_down": "§4Are you okay?",
   "tooltip.loquatmadness.loquatnitian_amalgamation": "§8Press [§eAlt§r§8] for more information.",
-  "tooltip.loquatmadness.chocolate_mix.shift_down": "§8Gives you §dRegeneration II§r §8for §615 seconds§r§8.",
+  "tooltip.loquatmadness.chocolate_mix.shift_down": "§8Gives you §dRegeneration II§r §8for §65 seconds§r§8.",
   "tooltip.loquatmadness.chocolate_mix": "§8Press [§eAlt§r§8] for more information.",
 
 
@@ -97,5 +98,6 @@
   "advancements.loquatmadness.eat_loquatnitian_amalgamation.description": "Eat a Loquatnitian Amalgamation \"voluntarily\".",
 
   "advancements.loquatmadness.survive_amalgamation.title": "God loves you!",
-  "advancements.loquatmadness.survive_amalgamation.description": "Survive at least for 10 seconds to a Loquatnitian Amalgamation ingest."
+  "advancements.loquatmadness.survive_amalgamation.description": "Survive at least for 10 seconds to a Loquatnitian Amalgamation ingest.",
+  "death.attack.loquatmadness.overdose": "%1$s had a heart attack."
 }
