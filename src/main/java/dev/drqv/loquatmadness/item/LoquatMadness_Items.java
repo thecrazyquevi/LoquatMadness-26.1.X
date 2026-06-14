@@ -65,7 +65,18 @@ public class LoquatMadness_Items {
             properties -> new Item(properties.food(ModFoods.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH, ModFoods.LOQUAT_CONSUMABLE)));
 
     public static final DeferredItem<Item> CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX = ITEMS.registerItem("concentrated_loquatnite_chocolate_mix",
-            properties -> new Item(properties.food(ModFoods.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX, ModFoods.MIX_CONSUMABLE)));
+            properties -> new Item(properties.food(ModFoods.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX, ModFoods.MIX_CONSUMABLE)) {
+                @Override
+                public void appendHoverText(ItemStack itemStack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+                    if(Minecraft.getInstance().hasAltDown()) {
+                        builder.accept(Component.translatable("tooltip.loquatmadness.chocolate_mix.shift_down"));
+                    } else {
+                        builder.accept(Component.translatable("tooltip.loquatmadness.chocolate_mix"));
+                    }
+
+                    super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> BURNING_LOQUAT = ITEMS.registerItem("burning_loquat",
             properties -> new Item(properties.food(ModFoods.PLUS_LOQUAT, ModFoods.BURNING_LOQUAT_CONSUMABLE).fireResistant()) {
