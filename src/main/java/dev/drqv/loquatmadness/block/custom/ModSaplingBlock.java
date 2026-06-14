@@ -1,5 +1,6 @@
 package dev.drqv.loquatmadness.block.custom;
 
+import dev.drqv.loquatmadness.worldgen.feature.ModConfiguredFeatures;
 import dev.drqv.loquatmadness.worldgen.feature.ModPlacedFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
@@ -21,9 +23,9 @@ public class ModSaplingBlock extends BushBlock {
 
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE;
 
-    private static final List<ResourceKey<PlacedFeature>> TREES = List.of(
-            ModPlacedFeatures.LOQUAT_TREE_1_PLACED,
-            ModPlacedFeatures.LOQUAT_TREE_2_PLACED
+    private static final List<ResourceKey<ConfiguredFeature<?, ?>>> TREES = List.of(
+            ModConfiguredFeatures.LOQUAT_TREE_1,
+            ModConfiguredFeatures.LOQUAT_TREE_2
     );
 
     public ModSaplingBlock(BlockBehaviour.Properties properties) {
@@ -59,9 +61,10 @@ public class ModSaplingBlock extends BushBlock {
     }
 
     private void growTree(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        ResourceKey<PlacedFeature> treeKey = TREES.get(random.nextInt(TREES.size()));
+        ResourceKey<ConfiguredFeature<?, ?>> treeKey = TREES.get(random.nextInt(TREES.size()));
+
         level.registryAccess()
-                .lookup(net.minecraft.core.registries.Registries.PLACED_FEATURE)
+                .lookup(net.minecraft.core.registries.Registries.CONFIGURED_FEATURE)
                 .flatMap(registry -> registry.get(treeKey))
                 .ifPresent(feature -> {
                     level.removeBlock(pos, false);

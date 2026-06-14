@@ -1,0 +1,32 @@
+{
+  "parent": "loquatmadness:main/has_loquatnite_fragment",
+  "criteria": {
+    "has_loquatnite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:concentrated_loquatnite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.loquatnite_ingot.description"
+    },
+    "icon": {
+      "id": "loquatmadness:concentrated_loquatnite"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.loquatnite_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_loquatnite_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

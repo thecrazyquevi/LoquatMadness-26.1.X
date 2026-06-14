@@ -18,6 +18,12 @@
         "chance": 0.45
       }
     },
+    "loquatmadness:loquat_group": {
+      "replace": true,
+      "value": {
+        "chance": 0.8
+      }
+    },
     "loquatmadness:loquat_leaves": {
       "replace": true,
       "value": {

@@ -25,7 +25,6 @@ import net.neoforged.neoforge.common.brewing.IBrewingRecipe;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 
-// 3. Make sure "your_mod_id" perfectly matches the ID in your neoforge.mods.toml
 @EventBusSubscriber(modid = LoquatMadness.MOD_ID)
 public class ModEvents {
 
@@ -33,7 +32,6 @@ public class ModEvents {
     public static void registerBrewingRecipes(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
 
-        // Usamos una receta personalizada limpia que maneja ítems puros sin buscar pociones
         builder.addRecipe(new BrewingRecipe(
                 Ingredient.of(LoquatMadness_Items.LOQUAT.get()),
                 Ingredient.of(Items.AMETHYST_SHARD),

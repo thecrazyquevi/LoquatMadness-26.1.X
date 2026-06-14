@@ -1,0 +1,30 @@
+{
+  "parent": "loquatmadness:main/eat_burning_loquat",
+  "criteria": {
+    "eat_loquatnite_sandwich": {
+      "conditions": {
+        "item": {
+          "items": "loquatmadness:glazed_concentrated_loquatnite_sandwich"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.eat_loquatnite_sandwich.description"
+    },
+    "icon": {
+      "id": "loquatmadness:glazed_concentrated_loquatnite_sandwich"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.eat_loquatnite_sandwich.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_loquatnite_sandwich"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -42,8 +42,16 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_PROPAGULE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE_SICKLE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUAT_GROUP.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE_ARROW.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITE_CORE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(LoquatMadness_Blocks.POTTED_LOQUAT_PROPAGULE.get().asItem(), ModelTemplates.FLAT_ITEM);
 

@@ -30,6 +30,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(LoquatMadness_Blocks.STRIPPED_LOQUAT_WOOD.get().asItem())
                 .add(LoquatMadness_Blocks.LOQUAT_WOOD.get().asItem());
 
+        tag(ItemTags.ARROWS)
+                .add(LoquatMadness_Items.LOQUATNITE_ARROW.get().asItem());
+
         tag(ItemTags.WOODEN_SLABS)
                 .add(LoquatMadness_Blocks.LOQUAT_SLAB.get().asItem());
 
@@ -66,8 +69,17 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.HANGING_SIGNS)
                 .add(LoquatMadness_Items.LOQUAT_HANGING_SIGN.get().asItem());
 
-        tag(Tags.Items.FOODS)
+        tag(Tags.Items.FOODS_FRUIT)
                 .add(LoquatMadness_Items.LOQUAT.get().asItem());
+
+        tag(Tags.Items.FOODS)
+                .add(LoquatMadness_Items.LOQUAT.get().asItem())
+                .add(LoquatMadness_Items.CANDY_LOQUAT.get().asItem())
+                .add(LoquatMadness_Items.BURNING_LOQUAT.get().asItem())
+                .add(LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get().asItem())
+                .add(LoquatMadness_Items.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH.get().asItem())
+                .add(LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX.get().asItem())
+                .add(LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION.get().asItem());
 
         tag(Tags.Items.INGOTS)
                 .add(LoquatMadness_Items.LOQUATNITE.get().asItem());
@@ -88,6 +100,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         /* TAGS CUSTOM */
         tag(ModTags.Items.LOQUATNITE_BARS)
                 .add(LoquatMadness_Items.LOQUATNITE.get());
+
+        tag(ModTags.Items.LOQUATNITE_CORES)
+                .add(LoquatMadness_Items.LOQUATNITE_CORE.get());
 
     }
 }

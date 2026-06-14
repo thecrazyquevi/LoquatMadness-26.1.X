@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "loquatmadness:concentrated_loquatnite",
+    "E": "minecraft:ender_eye",
+    "F": "minecraft:fermented_spider_eye",
+    "K": "minecraft:pumpkin_pie",
+    "M": "minecraft:magma_cream",
+    "P": "minecraft:pufferfish",
+    "S": "minecraft:glistering_melon_slice"
+  },
+  "pattern": [
+    "PES",
+    "CCC",
+    "FKM"
+  ],
+  "result": {
+    "id": "loquatmadness:loquatnitian_amalgamation"
+  }
+}

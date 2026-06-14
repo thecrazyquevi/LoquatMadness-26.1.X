@@ -20,6 +20,11 @@ public class ModBiomeTagsProvider extends BiomeTagsProvider {
             Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "has_loquat_tree")
     );
 
+    public static final TagKey<Biome> HAS_LOQUAT_TREE_ALT = TagKey.create(
+            Registries.BIOME,
+            Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "has_loquat_tree_alt")
+    );
+
     public ModBiomeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider, LoquatMadness.MOD_ID);
     }
@@ -27,11 +32,13 @@ public class ModBiomeTagsProvider extends BiomeTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(HAS_LOQUAT_TREE)
-                .addTag(BiomeTags.IS_FOREST)
-                .addTag(BiomeTags.IS_TAIGA)
-                .addTag(BiomeTags.IS_JUNGLE)
                 .addTag(BiomeTags.IS_SAVANNA)
                 .addTag(BiomeTags.HAS_VILLAGE_PLAINS)
                 .addTag(BiomeTags.HAS_SWAMP_HUT);
+
+        tag(HAS_LOQUAT_TREE_ALT)
+                .addTag(BiomeTags.IS_FOREST)
+                .addTag(BiomeTags.IS_TAIGA)
+                .addTag(BiomeTags.IS_JUNGLE);
     }
 }

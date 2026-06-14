@@ -87,23 +87,39 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
 
         PlacementModifier strictHeightmap = HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG);
 
-        PlacementModifier survivalFilter = BlockPredicateFilter.forPredicate(
-                BlockPredicate.matchesTag(BlockTags.DIRT)
-        );
-
         PlacementModifier realAntiCrowdingFilter = BlockPredicateFilter.forPredicate(
                 BlockPredicate.allOf(
-                        // Detectar si hay hojas de cualquier árbol a 3 bloques de distancia en cruz
+
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(3, 3, 0), BlockTags.LEAVES)),
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-3, 3, 0), BlockTags.LEAVES)),
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 3, 3), BlockTags.LEAVES)),
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 3, -3), BlockTags.LEAVES)),
 
-                        // Diagonales (Evita que las esquinas de las copas se entrelacen)
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(2, 3, 2), BlockTags.LEAVES)),
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-2, 3, 2), BlockTags.LEAVES)),
                         BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(2, 3, -2), BlockTags.LEAVES)),
-                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-2, 3, -2), BlockTags.LEAVES))
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-2, 3, -2), BlockTags.LEAVES)),
+
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(2, 4, 0), BlockTags.LEAVES)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-2, 4, 0), BlockTags.LEAVES)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 4, 2), BlockTags.LEAVES)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 4, -2), BlockTags.LEAVES)),
+
+
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(1, 1, 0), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-1, 1, 0), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 1, 1), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 1, -1), BlockTags.LOGS)),
+
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(2, 1, 0), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-2, 1, 0), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 1, 2), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(0, 1, -2), BlockTags.LOGS)),
+
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(1, 1, 1), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-1, 1, 1), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(1, 1, -1), BlockTags.LOGS)),
+                        BlockPredicate.not(BlockPredicate.matchesTag(new Vec3i(-1, 1, -1), BlockTags.LOGS))
                 )
         );
 
@@ -115,13 +131,12 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(ModConfiguredFeatures.LOQUAT_TREE_1),
                         List.of(
-                                RarityFilter.onAverageOnceEvery(14),     // Subimos un poco la rareza para compensar
+                                RarityFilter.onAverageOnceEvery(6),
                                 InSquarePlacement.spread(),
-                                strictHeightmap,                        // 1º Ir a la superficie
-                                grassOnlyFilter,                        // 2º Comprobar que el suelo esté intacto
-                                realAntiCrowdingFilter,                 // 3º Comprobar espacio aéreo libre de hojas
-                                SurfaceWaterDepthFilter.forMaxDepth(0),
-                                BiomeFilter.biome()
+                                strictHeightmap,
+                                grassOnlyFilter,
+                                realAntiCrowdingFilter,
+                                SurfaceWaterDepthFilter.forMaxDepth(0)
                         )
                 )
         );
@@ -130,13 +145,12 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(ModConfiguredFeatures.LOQUAT_TREE_2),
                         List.of(
-                                RarityFilter.onAverageOnceEvery(14),     // Subimos un poco la rareza para compensar
+                                RarityFilter.onAverageOnceEvery(36),
                                 InSquarePlacement.spread(),
-                                strictHeightmap,                        // 1º Ir a la superficie
-                                grassOnlyFilter,                        // 2º Comprobar que el suelo esté intacto
-                                realAntiCrowdingFilter,                 // 3º Comprobar espacio aéreo libre de hojas
-                                SurfaceWaterDepthFilter.forMaxDepth(0),
-                                BiomeFilter.biome()
+                                strictHeightmap,
+                                grassOnlyFilter,
+                                realAntiCrowdingFilter,
+                                SurfaceWaterDepthFilter.forMaxDepth(0)
                         )
                 )
         );
@@ -148,12 +162,23 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
 
         context.register(
                 ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                        Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "loquat_trees")),
+                        Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "loquat_tree_2")),
                 new BiomeModifiers.AddFeaturesBiomeModifier(
                         biomes.getOrThrow(ModBiomeTagsProvider.HAS_LOQUAT_TREE),
                         HolderSet.direct(
-                                placedFeatures.getOrThrow(ModPlacedFeatures.LOQUAT_TREE_1_PLACED),
                                 placedFeatures.getOrThrow(ModPlacedFeatures.LOQUAT_TREE_2_PLACED)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                )
+        );
+
+        context.register(
+                ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
+                        Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "loquat_tree_1")),
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(ModBiomeTagsProvider.HAS_LOQUAT_TREE_ALT),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.LOQUAT_TREE_1_PLACED)
                         ),
                         GenerationStep.Decoration.VEGETAL_DECORATION
                 )

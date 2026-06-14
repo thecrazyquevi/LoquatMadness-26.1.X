@@ -47,12 +47,20 @@ public class ModCreativeModeTabs {
                         output.accept(LoquatMadness_Blocks.LOQUAT_PROPAGULE);
 
                         output.accept(LoquatMadness_Items.LOQUAT);
+                        output.accept(LoquatMadness_Items.LOQUAT_GROUP);
                         output.accept(LoquatMadness_Items.CANDY_LOQUAT);
                         output.accept(LoquatMadness_Items.BURNING_LOQUAT);
                         output.accept(LoquatMadness_Items.LOQUAT_SKIN);
                         output.accept(LoquatMadness_Items.RODQUAT);
                         output.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
                         output.accept(LoquatMadness_Items.LOQUATNITE);
+                        output.accept(LoquatMadness_Items.CONCENTRATED_LOQUATNITE);
+                        output.accept(LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX);
+                        output.accept(LoquatMadness_Items.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH);
+                        output.accept(LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION);
+                        output.accept(LoquatMadness_Items.LOQUATNITE_CORE);
+                        output.accept(LoquatMadness_Items.LOQUATNITE_ARROW);
+                        output.accept(LoquatMadness_Items.LOQUATNITE_SICKLE);
 
 
                     }).build());

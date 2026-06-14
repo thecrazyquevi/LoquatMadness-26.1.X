@@ -132,6 +132,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         simpleCookingRecipe("loquat_skin", SmeltingRecipe::new, 200, LoquatMadness_Items.LOQUAT.get(), LoquatMadness_Items.LOQUAT_SKIN.get(), 0.2f);
+        simpleCookingRecipe("concentrated_loquatnite", SmeltingRecipe::new, 200, LoquatMadness_Items.LOQUATNITE.get(), LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get(), 0.2f);
 
         shaped(RecipeCategory.MISC, LoquatMadness_Items.LOQUATNITE.get(), 1)
                 .pattern("AAA")
@@ -170,6 +171,79 @@ public class ModRecipeProvider extends RecipeProvider {
         signBuilder(LoquatMadness_Items.LOQUAT_SIGN.get(), Ingredient.of(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .unlockedBy("has_loquat_planks", has(LoquatMadness_Blocks.LOQUAT_PLANKS.get()))
                 .group("loquat")
+                .save(output);
+
+        shaped(RecipeCategory.MISC, LoquatMadness_Items.LOQUAT_GROUP.get(), 1)
+                .pattern("LL")
+                .pattern("LL")
+                .define('L', LoquatMadness_Items.LOQUAT.get())
+                .unlockedBy("has_loquat", has(LoquatMadness_Items.LOQUAT.get()))
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, LoquatMadness_Items.LOQUATNITE_ARROW.get(), 1)
+                .pattern("L")
+                .pattern("R")
+                .pattern("F")
+                .define('L', LoquatMadness_Items.LOQUATNITE_FRAGMENT.get())
+                .define('R', LoquatMadness_Items.RODQUAT.get())
+                .define('F', Items.FEATHER)
+                .unlockedBy("has_loquatnite_fragment", has(LoquatMadness_Items.LOQUATNITE_FRAGMENT.get()))
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, LoquatMadness_Items.LOQUATNITE_SICKLE.get(), 1)
+                .pattern("CCL")
+                .pattern("CR ")
+                .pattern("R  ")
+                .define('L', LoquatMadness_Items.LOQUATNITE_CORE.get())
+                .define('C', LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get())
+                .define('R', LoquatMadness_Items.RODQUAT.get())
+                .unlockedBy("has_loquatnite_core", has(LoquatMadness_Items.LOQUATNITE_CORE.get()))
+                .save(output);
+
+        shaped(RecipeCategory.MISC, LoquatMadness_Items.LOQUATNITE_CORE.get(), 1)
+                .pattern("LLL")
+                .pattern("LRL")
+                .pattern("LLL")
+                .define('L', LoquatMadness_Items.LOQUAT_SKIN.get())
+                .define('R', LoquatMadness_Items.LOQUATNITE.get())
+                .unlockedBy("has_loquatnite", has(LoquatMadness_Items.LOQUATNITE.get()))
+                .save(output);
+
+        shaped(RecipeCategory.MISC, LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION.get(), 1)
+                .pattern("PES")
+                .pattern("CCC")
+                .pattern("FKM")
+                .define('C', LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get())
+                .define('P', Items.PUFFERFISH)
+                .define('E', Items.ENDER_EYE)
+                .define('S', Items.GLISTERING_MELON_SLICE)
+                .define('F', Items.FERMENTED_SPIDER_EYE)
+                .define('K', Items.PUMPKIN_PIE)
+                .define('M', Items.MAGMA_CREAM)
+                .unlockedBy("has_concentrated_loquatnite", has(LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get()))
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, LoquatMadness_Items.LOQUAT.get(), 4)
+                .requires(LoquatMadness_Items.LOQUAT_GROUP.get(), 1)
+                .unlockedBy("has_loquat_group", has(LoquatMadness_Items.LOQUAT_GROUP.get()))
+                .save(output);
+
+        shaped(RecipeCategory.FOOD, LoquatMadness_Items.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH.get(), 1)
+                .pattern(" B ")
+                .pattern("ELH")
+                .pattern(" B ")
+                .define('L', LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get())
+                .define('B', Items.BREAD)
+                .define('E', Items.EGG)
+                .define('H', Items.HONEY_BOTTLE)
+                .unlockedBy("has_concentrated_loquatnite", has(LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get()))
+                .save(output);
+
+        shaped(RecipeCategory.FOOD, LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX.get(), 1)
+                .pattern("CLC")
+                .define('L', LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get())
+                .define('C', Items.COCOA_BEANS)
+                .unlockedBy("has_concentrated_loquatnite", has(LoquatMadness_Items.CONCENTRATED_LOQUATNITE.get()))
                 .save(output);
 
         hangingSign(LoquatMadness_Items.LOQUAT_HANGING_SIGN.get(), LoquatMadness_Blocks.STRIPPED_LOQUAT_LOG);

@@ -1,0 +1,32 @@
+{
+  "parent": "loquatmadness:main/eat_loquat",
+  "criteria": {
+    "has_loquatnite_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquatnite_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.loquatnite_fragment.description"
+    },
+    "icon": {
+      "id": "loquatmadness:loquatnite_fragment"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.loquatnite_fragment.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_loquatnite_fragment"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

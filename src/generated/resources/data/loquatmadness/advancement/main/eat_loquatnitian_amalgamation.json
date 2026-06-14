@@ -1,0 +1,30 @@
+{
+  "parent": "loquatmadness:main/eat_loquatnite_sandwich",
+  "criteria": {
+    "eat_loquatnitian_amalgamation": {
+      "conditions": {
+        "item": {
+          "items": "loquatmadness:loquatnitian_amalgamation"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.eat_loquatnitian_amalgamation.description"
+    },
+    "icon": {
+      "id": "loquatmadness:loquatnitian_amalgamation"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.eat_loquatnitian_amalgamation.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_loquatnitian_amalgamation"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

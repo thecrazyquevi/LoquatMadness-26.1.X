@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": "minecraft:feather",
+    "L": "loquatmadness:loquatnite_fragment",
+    "R": "loquatmadness:rodquat"
+  },
+  "pattern": [
+    "L",
+    "R",
+    "F"
+  ],
+  "result": {
+    "id": "loquatmadness:loquatnite_arrow"
+  }
+}

@@ -19,6 +19,7 @@ public class ModVillagerTradesTagsProvider extends KeyTagProvider<VillagerTrade>
     protected void addTags(HolderLookup.Provider provider) {
         tag(VillagerTradeTags.WANDERING_TRADER_COMMON)
                 .add(ModVillagerTradeProvider.LOQUAT_PROPAGULE_TRADE)
-                .add(ModVillagerTradeProvider.LOQUAT_LOG_TRADE);
+                .add(ModVillagerTradeProvider.LOQUAT_LOG_TRADE)
+                .add(ModVillagerTradeProvider.LOQUAT_GROUP_TRADE);
     }
 }

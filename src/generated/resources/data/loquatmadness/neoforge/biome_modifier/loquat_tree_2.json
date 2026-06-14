@@ -1,9 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "#loquatmadness:has_loquat_tree",
-  "features": [
-    "loquatmadness:loquat_tree_1",
-    "loquatmadness:loquat_tree_2"
-  ],
+  "features": "loquatmadness:loquat_tree_2",
   "step": "vegetal_decoration"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_concentrated_loquatnite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:concentrated_loquatnite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "loquatmadness:glazed_concentrated_loquatnite_sandwich"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_concentrated_loquatnite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "loquatmadness:glazed_concentrated_loquatnite_sandwich"
+    ]
+  }
+}

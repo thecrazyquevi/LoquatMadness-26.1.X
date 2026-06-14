@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_loquatnite_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquatnite_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "loquatmadness:loquatnite_arrow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_loquatnite_fragment"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "loquatmadness:loquatnite_arrow"
+    ]
+  }
+}

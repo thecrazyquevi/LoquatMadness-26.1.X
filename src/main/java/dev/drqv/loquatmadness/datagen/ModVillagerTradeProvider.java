@@ -31,6 +31,10 @@ public class ModVillagerTradeProvider extends JsonCodecProvider<VillagerTrade> {
             VILLAGER_TRADE, Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "wandering_trader_loquat_log")
     );
 
+    public static final ResourceKey<VillagerTrade> LOQUAT_GROUP_TRADE = ResourceKey.create(
+            VILLAGER_TRADE, Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "wandering_trader_loquat_group")
+    );
+
     public ModVillagerTradeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, PackOutput.Target.DATA_PACK, "villager_trade", VillagerTrade.CODEC, lookupProvider, LoquatMadness.MOD_ID);
     }
@@ -51,6 +55,15 @@ public class ModVillagerTradeProvider extends JsonCodecProvider<VillagerTrade> {
                 new VillagerTrade(
                         new TradeCost(Items.EMERALD, 1),
                         new ItemStackTemplate(LoquatMadness_Blocks.LOQUAT_LOG.get().asItem(), 8),
+                        5, 1, 0.05F, Optional.empty(), List.of()
+                )
+        );
+
+        unconditional(
+                Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, "wandering_trader_loquat_group"),
+                new VillagerTrade(
+                        new TradeCost(Items.EMERALD, 3),
+                        new ItemStackTemplate(LoquatMadness_Items.LOQUAT_GROUP.get().asItem(), 1),
                         5, 1, 0.05F, Optional.empty(), List.of()
                 )
         );

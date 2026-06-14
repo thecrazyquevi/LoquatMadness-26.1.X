@@ -22,6 +22,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> LOQUATNITE_BARS = createTag("loquatnite_bars");
+        public static final TagKey<Item> LOQUATNITE_CORES = createTag("loquatnite_cores");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Identifier.fromNamespaceAndPath(LoquatMadness.MOD_ID, name));

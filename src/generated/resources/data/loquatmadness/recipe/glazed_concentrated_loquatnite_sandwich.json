@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:bread",
+    "E": "minecraft:egg",
+    "H": "minecraft:honey_bottle",
+    "L": "loquatmadness:concentrated_loquatnite"
+  },
+  "pattern": [
+    " B ",
+    "ELH",
+    " B "
+  ],
+  "result": {
+    "id": "loquatmadness:glazed_concentrated_loquatnite_sandwich"
+  }
+}

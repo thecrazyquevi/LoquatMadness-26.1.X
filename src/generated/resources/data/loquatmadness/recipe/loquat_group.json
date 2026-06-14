@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": "loquatmadness:loquat"
+  },
+  "pattern": [
+    "LL",
+    "LL"
+  ],
+  "result": {
+    "id": "loquatmadness:loquat_group"
+  }
+}

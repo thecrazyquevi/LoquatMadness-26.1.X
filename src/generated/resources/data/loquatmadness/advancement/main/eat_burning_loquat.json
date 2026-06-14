@@ -1,0 +1,30 @@
+{
+  "parent": "loquatmadness:main/eat_candy_loquat",
+  "criteria": {
+    "eat_burning_loquat": {
+      "conditions": {
+        "item": {
+          "items": "loquatmadness:burning_loquat"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.eat_burning_loquat.description"
+    },
+    "icon": {
+      "id": "loquatmadness:burning_loquat"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.eat_burning_loquat.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_burning_loquat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

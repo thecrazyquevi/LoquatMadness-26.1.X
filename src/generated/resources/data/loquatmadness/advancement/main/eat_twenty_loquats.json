@@ -1,0 +1,25 @@
+{
+  "parent": "loquatmadness:main/eat_loquat",
+  "criteria": {
+    "consume_twenty_times": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.eat_twenty_loquats.description"
+    },
+    "icon": {
+      "id": "loquatmadness:loquat_group"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.eat_twenty_loquats.title"
+    }
+  },
+  "requirements": [
+    [
+      "consume_twenty_times"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

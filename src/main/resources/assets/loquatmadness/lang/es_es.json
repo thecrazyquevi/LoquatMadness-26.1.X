@@ -1,5 +1,6 @@
 {
   "item.loquatmadness.loquat": "Níspero",
+  "item.loquatmadness.loquat_group": "Grupo de nísperos",
   "item.loquatmadness.loquat_skin": "Piel de níspero",
   "item.loquatmadness.candy_loquat": "Níspero caramelizado",
   "item.loquatmadness.burning_loquat": "Níspero ardiente",
@@ -7,9 +8,16 @@
   "item.loquatmadness.loquatnite_fragment": "Fragmento de nisperita",
   "item.loquatmadness.loquatnite": "Nisperita",
   "item.loquatmadness.loquatnite_hoe": "Azada de nisperita",
+  "item.loquatmadness.loquatnite_core": "Núcleo de nisperita",
   "item.loquatmadness.loquat_propagule": "Propágulo de níspero",
   "item.loquatmadness.loquat_boat": "Barca de níspero",
   "item.loquatmadness.loquat_chest_boat": "Barca de níspero con cofre",
+  "item.loquatmadness.loquatnite_arrow": "Flecha de nisperita",
+  "item.loquatmadness.loquatnite_sickle": "Hoz de nisperita",
+  "item.loquatmadness.concentrated_loquatnite": "Nisperita concentrada",
+  "item.loquatmadness.loquatnitian_amalgamation": "Amalgamación nisperiana",
+  "item.loquatmadness.glazed_concentrated_loquatnite_sandwich": "Emparedado de nisperita concentrada glaceada",
+  "item.loquatmadness.concentrated_loquatnite_chocolate_mix": "Mix de chocolate con nisperita concentrada",
 
 
   "item.loquatmadness.loquat_sign": "Cartel de níspero",
@@ -35,6 +43,7 @@
   "block.loquatmadness.loquat_shelf": "Estante de níspero",
 
   "entity.loquatmadness.loquat_chest_boat": "Barca de níspero con cofre",
+  "entity.loquatmadness.loquatnite_arrow": "Flecha de nisperita",
 
 
   "creativetab.loquatmadness.loquat_madness": "Loquat Madness",
@@ -45,5 +54,48 @@
   "tooltip.loquatmadness.candy_loquat": "§8Presiona [§eAlt§r§8] para más información.",
   "tooltip.loquatmadness.candy_loquat.shift_down": "§8Te otorga §bVelocidad I§r §8por §630 segundos§r§8.",
   "tooltip.loquatmadness.loquatnite_how.shift_down": "§8Te susurra §aFortuna III§r§8 con un tono §opacífico.§r",
-  "tooltip.loquatmadness.loquatnite_hoe": "§8Presiona [§eAlt§r§8] para más información."
+  "tooltip.loquatmadness.loquatnite_hoe": "§8Presiona [§eAlt§r§8] para más información.",
+  "tooltip.loquatmadness.loquatnite_arrow.shift_down": "§5Aturde§r §8a tus enemigos por §62 segundos§r§8.",
+  "tooltip.loquatmadness.loquatnite_arrow": "§8Presiona [§eAlt§r§8] para más información.",
+  "tooltip.loquatmadness.loquatnitian_amalgamation.shift_down": "§4¿Estás bien?",
+  "tooltip.loquatmadness.loquatnitian_amalgamation": "§8Presiona [§eAlt§r§8] para más información.",
+
+
+
+
+  "advancements.loquatmadness.root.title": "Loquat Madness",
+  "advancements.loquatmadness.root.description": "¡Bienvenido a Loquat Madness!",
+
+  "advancements.loquatmadness.eat_loquat.title": "Come un níspero",
+  "advancements.loquatmadness.eat_loquat.description": "Come 1 níspero.",
+
+  "advancements.loquatmadness.eat_twenty_loquats.title": "Degustador profesional",
+  "advancements.loquatmadness.eat_twenty_loquats.description": "Come 20 nísperos.",
+
+  "advancements.loquatmadness.eat_candy_loquat.title": "Esto sabe más dulce",
+  "advancements.loquatmadness.eat_candy_loquat.description": "Come un níspero caramelizado.",
+
+  "advancements.loquatmadness.loquatnite_fragment.title": "Ten cuidado, ¡no lo comas!",
+  "advancements.loquatmadness.loquatnite_fragment.description": "Fabrica un \",Fragmento de nísperita\" mediante un estante de pociones con un \"Fragmento de amatista\" y \"nísperos\".",
+
+  "advancements.loquatmadness.eat_burning_loquat.title": "¡Esto está que arde!",
+  "advancements.loquatmadness.eat_burning_loquat.description": "Come un níspero ardiente.",
+
+  "advancements.loquatmadness.loquatnite_ingot.title": "¿Y ahora por qué está brillando?",
+  "advancements.loquatmadness.loquatnite_ingot.description": "Fabrica \"Nisperita concentrada\".",
+
+  "advancements.loquatmadness.loquatnite_hoe.title": "¡Ármate de calorías!",
+  "advancements.loquatmadness.loquatnite_hoe.description": "Fabrica una azada de nisperita.",
+
+  "advancements.loquatmadness.loquatnite_sickle.title": "¡Una amarga aniquilación!",
+  "advancements.loquatmadness.loquatnite_sickle.description": "Fabrica una hoz de nisperita.",
+
+  "advancements.loquatmadness.eat_loquatnite_sandwich.title": "¡Una descarga calórica extraordinaria!",
+  "advancements.loquatmadness.eat_loquatnite_sandwich.description": "Come un \"Emparedado de nisperita concentrada glaceada\".",
+
+  "advancements.loquatmadness.eat_loquatnitian_amalgamation.title": "Ataque cardiaco...",
+  "advancements.loquatmadness.eat_loquatnitian_amalgamation.description": "Come \"voluntariamente\" una Amalgamación nisperiana.",
+
+  "advancements.loquatmadness.survive_amalgamation.title": "¡Dios te quiere!",
+  "advancements.loquatmadness.survive_amalgamation.description": "Sobrevive por al menos 10 segundos a la ingesta de una Amalgamación nisperiana."
 }

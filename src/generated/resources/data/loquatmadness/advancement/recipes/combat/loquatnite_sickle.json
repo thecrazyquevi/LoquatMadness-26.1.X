@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_loquatnite_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquatnite_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "loquatmadness:loquatnite_sickle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_loquatnite_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "loquatmadness:loquatnite_sickle"
+    ]
+  }
+}

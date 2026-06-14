@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_loquat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "loquatmadness:block/loquat_planks",
+    "description": {
+      "translate": "advancements.loquatmadness.root.description"
+    },
+    "icon": {
+      "id": "loquatmadness:loquat"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_loquat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

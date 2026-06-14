@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "loquatmadness:concentrated_loquatnite",
+    "L": "loquatmadness:loquatnite_core",
+    "R": "loquatmadness:rodquat"
+  },
+  "pattern": [
+    "CCL",
+    "CR ",
+    "R  "
+  ],
+  "result": {
+    "id": "loquatmadness:loquatnite_sickle"
+  }
+}

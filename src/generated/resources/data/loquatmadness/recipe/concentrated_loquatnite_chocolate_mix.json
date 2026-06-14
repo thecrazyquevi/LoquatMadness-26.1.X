@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:cocoa_beans",
+    "L": "loquatmadness:concentrated_loquatnite"
+  },
+  "pattern": [
+    "CLC"
+  ],
+  "result": {
+    "id": "loquatmadness:concentrated_loquatnite_chocolate_mix"
+  }
+}

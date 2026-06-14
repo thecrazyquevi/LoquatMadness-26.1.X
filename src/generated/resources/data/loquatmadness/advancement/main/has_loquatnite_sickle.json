@@ -1,0 +1,33 @@
+{
+  "parent": "loquatmadness:main/has_loquatnite_hoe",
+  "criteria": {
+    "has_loquatnite_sickle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "loquatmadness:loquatnite_sickle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.loquatnite_sickle.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "loquatmadness:loquatnite_sickle"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.loquatnite_sickle.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_loquatnite_sickle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

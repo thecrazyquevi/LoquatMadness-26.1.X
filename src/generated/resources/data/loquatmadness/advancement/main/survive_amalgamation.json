@@ -1,0 +1,26 @@
+{
+  "parent": "loquatmadness:main/eat_loquatnitian_amalgamation",
+  "criteria": {
+    "survived_ten_seconds": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.survive_amalgamation.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "loquatmadness:loquatnitian_amalgamation"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.survive_amalgamation.title"
+    }
+  },
+  "requirements": [
+    [
+      "survived_ten_seconds"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

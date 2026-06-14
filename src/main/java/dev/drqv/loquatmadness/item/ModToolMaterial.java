@@ -13,5 +13,14 @@ public class ModToolMaterial {
             18,
             ModTags.Items.LOQUATNITE_BARS
     );
+
+    public static final ToolMaterial LOQUATNITE_CORE_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
+            82,
+            4f,
+            1f,
+            18,
+            ModTags.Items.LOQUATNITE_CORES
+    );
 }
 

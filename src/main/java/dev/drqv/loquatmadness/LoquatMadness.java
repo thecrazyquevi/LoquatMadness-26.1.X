@@ -2,12 +2,15 @@ package dev.drqv.loquatmadness;
 
 import dev.drqv.loquatmadness.block.LoquatMadness_Blocks;
 import dev.drqv.loquatmadness.block.entity.ModBlockEntities;
+import dev.drqv.loquatmadness.client.LoquatniteArrowDispenseBehavior;
 import dev.drqv.loquatmadness.creativemodetab.ModCreativeModeTabs;
 import dev.drqv.loquatmadness.entity.ModEntities;
 import dev.drqv.loquatmadness.item.LoquatMadness_Items;
+import dev.drqv.loquatmadness.registry.ModEntityTypes;
 import dev.drqv.loquatmadness.worldgen.feature.ModConfiguredFeatures;
 import dev.drqv.loquatmadness.worldgen.feature.ModPlacedFeatures;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.FireBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import org.slf4j.Logger;
@@ -27,18 +30,16 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
+
 @Mod(LoquatMadness.MOD_ID)
 public class LoquatMadness {
-    // Define mod id in a common place for everything to reference
+
     public static final String MOD_ID = "loquatmadness";
-    // Directly reference a slf4j logger
+
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public LoquatMadness(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
+
         modEventBus.addListener(this::commonSetup);
 
         ModCreativeModeTabs.register(modEventBus);
@@ -46,16 +47,14 @@ public class LoquatMadness {
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
 
         LoquatMadness_Items.register(modEventBus);
         LoquatMadness_Blocks.register(modEventBus);
 
-        
-
         NeoForge.EVENT_BUS.register(this);
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -66,21 +65,33 @@ public class LoquatMadness {
                     LoquatMadness_Blocks.POTTED_LOQUAT_PROPAGULE
             );
         });
+
+        event.enqueueWork(() -> {
+            DispenserBlock.registerBehavior(
+                    LoquatMadness_Items.LOQUATNITE_ARROW.get(),
+                    new LoquatniteArrowDispenseBehavior()
+            );
+        });
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(LoquatMadness_Items.LOQUAT);
             event.accept(LoquatMadness_Items.CANDY_LOQUAT);
             event.accept(LoquatMadness_Items.BURNING_LOQUAT);
+            event.accept(LoquatMadness_Items.CONCENTRATED_LOQUATNITE);
+            event.accept(LoquatMadness_Items.GLAZED_CONCENTRATED_LOQUATNITE_SANDWICH);
+            event.accept(LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX);
+            event.accept(LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION);
         }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(LoquatMadness_Items.LOQUAT_SKIN);
+            event.accept(LoquatMadness_Items.LOQUAT_GROUP);
             event.accept(LoquatMadness_Items.RODQUAT);
             event.accept(LoquatMadness_Items.LOQUATNITE_FRAGMENT);
             event.accept(LoquatMadness_Items.LOQUATNITE);
+            event.accept(LoquatMadness_Items.LOQUATNITE_CORE);
         }
 
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
@@ -118,10 +129,11 @@ public class LoquatMadness {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(LoquatMadness_Items.LOQUAT_BOAT);
             event.accept(LoquatMadness_Items.LOQUAT_CHEST_BOAT);
+            event.accept(LoquatMadness_Items.LOQUATNITE_ARROW);
+            event.accept(LoquatMadness_Items.LOQUATNITE_SICKLE);
         }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 

@@ -1,0 +1,30 @@
+{
+  "parent": "loquatmadness:main/root",
+  "criteria": {
+    "eat_loquat": {
+      "conditions": {
+        "item": {
+          "items": "loquatmadness:loquat"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.loquatmadness.eat_loquat.description"
+    },
+    "icon": {
+      "id": "loquatmadness:loquat"
+    },
+    "title": {
+      "translate": "advancements.loquatmadness.eat_loquat.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_loquat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

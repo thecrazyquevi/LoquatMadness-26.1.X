@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": "loquatmadness:loquat_skin",
+    "R": "loquatmadness:loquatnite"
+  },
+  "pattern": [
+    "LLL",
+    "LRL",
+    "LLL"
+  ],
+  "result": {
+    "id": "loquatmadness:loquatnite_core"
+  }
+}
