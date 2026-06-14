@@ -30,11 +30,8 @@ public class ModAdvancementEvents {
 
             if (event.getItem().is(LoquatMadness_Items.LOQUAT.get())) {
 
-                int cantidadActual = CONTADOR_NISPEROS.getOrDefault(playerUUID, 0) + 1;
-                CONTADOR_NISPEROS.put(playerUUID, cantidadActual);
-
+                int cantidadActual = player.getStats().getValue(net.minecraft.stats.Stats.ITEM_USED.get(LoquatMadness_Items.LOQUAT.get())) + 1;
                 if (cantidadActual >= 20) {
-
 
                     if (player.level() instanceof ServerLevel serverLevel) {
                         net.minecraft.server.MinecraftServer server = serverLevel.getServer();

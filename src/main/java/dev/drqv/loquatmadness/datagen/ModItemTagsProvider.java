@@ -81,6 +81,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(LoquatMadness_Items.CONCENTRATED_LOQUATNITE_CHOCOLATE_MIX.get().asItem())
                 .add(LoquatMadness_Items.LOQUATNITIAN_AMALGAMATION.get().asItem());
 
+        tag(ItemTags.SWORDS)
+                .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
         tag(Tags.Items.INGOTS)
                 .add(LoquatMadness_Items.LOQUATNITE.get().asItem());
 
