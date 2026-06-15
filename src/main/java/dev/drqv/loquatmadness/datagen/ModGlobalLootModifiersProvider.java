@@ -21,7 +21,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        // Almacenamos la ruta hacia la tabla de botín personalizada que creamos en el Paso 1
+
         ResourceKey<LootTable> loquatItems = ResourceKey.create(
                 Registries.LOOT_TABLE,
                 Identifier.fromNamespaceAndPath("loquatmadness", "chests/loquat_items_loot"));
