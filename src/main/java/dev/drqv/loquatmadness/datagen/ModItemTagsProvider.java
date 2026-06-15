@@ -6,6 +6,7 @@ import dev.drqv.loquatmadness.item.LoquatMadness_Items;
 import dev.drqv.loquatmadness.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
@@ -84,8 +85,18 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.SWORDS)
                 .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
 
-        tag(ItemTags.MELEE_WEAPON_ENCHANTABLE)
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
+        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
+                .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
+        tag(ItemTags.SWEEPING_ENCHANTABLE)
+                .add(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
+        tag(ItemTags.SHARP_WEAPON_ENCHANTABLE)
+                .remove(LoquatMadness_Items.LOQUATNITE_SICKLE.get().asItem());
+
 
         tag(Tags.Items.INGOTS)
                 .add(LoquatMadness_Items.LOQUATNITE.get().asItem());

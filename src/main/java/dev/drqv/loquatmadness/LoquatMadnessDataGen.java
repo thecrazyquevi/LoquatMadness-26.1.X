@@ -21,27 +21,31 @@ public class LoquatMadnessDataGen {
         PackOutput packOutput = generator.getPackOutput();
         var lookupProvider = event.getLookupProvider();
 
+        // Tus proveedores actuales intactos
         generator.addProvider(true, new ModModelProvider(packOutput));
-
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
-
         generator.addProvider(true, new ModBlockTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
-
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
-
         generator.addProvider(true, new ModVillagerTradeProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModVillagerTradesTagsProvider(packOutput, lookupProvider));
-
         generator.addProvider(true, new ModWorldGenProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
-
         generator.addProvider(true, new ModAdvancementProvider(packOutput, lookupProvider));
 
-        generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+
+        generator.addProvider(true, new ModGlobalLootModifiersProvider(packOutput, lookupProvider, LoquatMadness.MOD_ID));
 
 
+        generator.addProvider(true, new LootTableProvider(
+                packOutput,
+                Collections.emptySet(),
+                List.of(
+                        new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                        new LootTableProvider.SubProviderEntry(ModChestLootSubProvider::new, LootContextParamSets.CHEST)
+                ),
+                lookupProvider
+        ));
     }
 
 }
